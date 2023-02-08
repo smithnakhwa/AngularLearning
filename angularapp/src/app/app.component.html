@@ -20,5 +20,9 @@
 
   <app-card (fromChild)="onParent($event)"></app-card>
   <p>I came From Parent and I am {{childToParent}}</p>
-
+<app-output-decorator (fromChildToParent)="onChildToParent($event)"></app-output-decorator>
+<p>The Student Name is: {{studobj.name}}</p>
+<p>The Student Roll No is: {{studobj.roll_no}}</p>
+<p>The Student Standard is: {{studobj.std}}<sup>th</sup></p>
 <router-outlet></router-outlet>
+

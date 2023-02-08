@@ -12,6 +12,7 @@ export class AppComponent {
   test='I am div with innerHTML';
   parentToChild :string="i am Coming From parent";
   childToParent:string;
+  studobj;
   post=[{
     title:'Plam Tree',
     contect: 'I Love this tree'
@@ -45,5 +46,8 @@ export class AppComponent {
   }
   onParent(val){
     this.childToParent=val;
+  }
+  onChildToParent(obj){
+    this.studobj=obj;
   }
 }

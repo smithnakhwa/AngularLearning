@@ -9,6 +9,7 @@ import { Test2Component } from './test2/test2.component';
 import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { PasswordComponent } from './password/password.component';
+import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PasswordComponent } from './password/password.component';
     Test1Component,
     Test2Component,
     CardComponent,
-    PasswordComponent
+    PasswordComponent,
+    OutputDecoratorComponent
   ],
   imports: [
     BrowserModule,
