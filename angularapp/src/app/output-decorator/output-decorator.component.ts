@@ -1,4 +1,5 @@
 import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
+import { Employee } from '../models/employee';
 
 @Component({
   selector: 'app-output-decorator',
@@ -6,18 +7,19 @@ import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
   styleUrls: ['./output-decorator.component.css']
 })
 export class OutputDecoratorComponent implements OnInit {
- @Output() fromChildToParent: EventEmitter<Object>=new EventEmitter<Object>();
- student={
-  name:'smith',
-  roll_no:22,
-  std:'16'
+ @Output() objFromChild:  EventEmitter<Employee>=new EventEmitter<Employee>();
 
- }
+ employee:Employee;
   constructor() { }
 
   ngOnInit() {
   }
   onClick(){
-    this.fromChildToParent.emit(this.student);
+  
+    this.employee=new Employee();
+    this.employee.name="SMith";
+    this.employee.sal=37857385;
+    this.objFromChild.emit(this.employee);
   }
+  
 }

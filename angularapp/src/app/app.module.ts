@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { PasswordComponent } from './password/password.component';
 import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OutputDecoratorComponent } from './output-decorator/output-decorator.co
     Test2Component,
     CardComponent,
     PasswordComponent,
-    OutputDecoratorComponent
+    OutputDecoratorComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './models/employee';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,8 @@ export class AppComponent {
   constructor(){
     this.getValueFromServer();
   }
+  ename:string;
+  sal:number;
   getValueFromServer(){
     this.empCount=100000;
   }
@@ -47,7 +50,10 @@ export class AppComponent {
   onParent(val){
     this.childToParent=val;
   }
-  onChildToParent(obj){
-    this.studobj=obj;
+
+  objChildToParent(val:Employee){
+    this.ename=val.name;
+    this.sal=val.sal;
+  
   }
 }
