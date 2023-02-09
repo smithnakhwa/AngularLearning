@@ -24,12 +24,17 @@ export class NgForComponent implements OnInit {
   onClick(val){
      if(val.target.value==this.country[0])
      {
-      this.states.unshift('Maharastra');
-      this.states.length=1;
+      this.states.length=0;
+      this.states.unshift('Maharastra','Assam','Goa');
+      
+     }
+     else if(val.target.value==this.country[1]){
+      this.states.length=0;
+      this.states.unshift('California','Alaska','Hawai');
+     
      }
      else{
-      this.states.unshift('California');
-      this.states.length=1;
+      this.states.length=0;
      }
      
   }
