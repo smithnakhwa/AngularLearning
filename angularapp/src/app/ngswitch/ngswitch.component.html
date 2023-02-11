@@ -1,0 +1,38 @@
+
+
+ <ng-container class="card" style="width: 18rem;" *ngFor="let course of courses">
+  <div *ngIf="course.id">
+    <img [src]="course.iconUrl" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{course.desc}}</h5>
+      <div [ngSwitch]="course.category">
+       <div *ngSwitchCase="'Intermediate'">Intermediate</div>
+       <div *ngSwitchCase="'Advance'">Advance</div>
+       <div *ngSwitchCase="'easy'">easy</div>
+       <div *ngSwitchDefault>default value</div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+
+<!-- <div class="container">
+  <div class="col-md-4">
+    <select class="form-control" (change)="oChange($event)">
+      <option value="Default">Select Product</option>
+      <option value="Laptop">Select Laptop</option>
+      <option value="Mobile">Select Mobile</option>
+      <option value="Tv">Select Tv</option>
+      <option value="Washing Machince">Select Washing Machince</option>
+     
+
+    </select>
+  </div>
+  <div class="col-md-12" [ngSwitch]="selectProduct">
+    <h2 class="text-success" *ngSwitchCase="'Laptop'">Laptop</h2>
+    <h2 class="text-success" *ngSwitchCase="'Mobile'">Mobile</h2>
+    <h2 class="text-success" *ngSwitchCase="'Tv'">Tv</h2>
+    <h2 class="text-success" *ngSwitchCase="'Washing Machince'">Washing Machince</h2>
+
+  </div>
+</div> -->
