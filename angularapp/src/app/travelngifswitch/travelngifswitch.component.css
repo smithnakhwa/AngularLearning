@@ -1,0 +1,29 @@
+.text-capitalize {
+     text-align: center;
+     font-weight: bolder;
+     font-family: 'Didact Gothic', sans-serif;
+     color: white;
+}
+.custom-select{
+    margin-left: 270px;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+.card{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.bit{
+    color: gold;
+    margin-left: 85px;
+}
+#demo{
+    text-align: center;
+    color: gold;
+    font-weight: bold;
+}
+#demo2{
+    font-weight: bold;
+    text-align: center;
+    color: green;
+}
