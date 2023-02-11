@@ -21,6 +21,7 @@
     "@angular/router": "~8.1.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3",
     "eventemitter3": "^4.0.7",
     "follow-redirects": "^1.14.9",
     "jquery": "^3.6.3",

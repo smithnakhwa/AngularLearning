@@ -11,6 +11,13 @@ import { CardComponent } from './card/card.component';
 import { PasswordComponent } from './password/password.component';
 import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgifComponent } from './ngif/ngif.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { TravelngifswitchComponent } from './travelngifswitch/travelngifswitch.component';
+import { NgstyleComponent } from './ngstyle/ngstyle.component';
+import { NgclassComponent } from './ngclass/ngclass.component';
+import { InputComponent } from './input/input.component';
+import { NgstylengclassComponent } from './ngstylengclass/ngstylengclass.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +28,14 @@ import { NgForComponent } from './ng-for/ng-for.component';
     CardComponent,
     PasswordComponent,
     OutputDecoratorComponent,
-    NgForComponent
+    NgForComponent,
+    NgifComponent,
+    NgswitchComponent,
+    TravelngifswitchComponent,
+    NgstyleComponent,
+    NgclassComponent,
+    InputComponent,
+    NgstylengclassComponent
   ],
   imports: [
     BrowserModule,
