@@ -7,15 +7,24 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class Test2Component implements OnInit {
   @Input() child: string;
+  @Input() fromparent:string;
   count:number=0;
   firstName:string="Rocky";
   username:string;
 
-  constructor() { }
+  constructor() {
+   this.smith();
+    
+   }
+   smith(){
+  
+
+   }
   
 
   ngOnInit() {
     console.log(this.child);
+    console.log(this.fromparent);
     
   }
   onButtonClick(){

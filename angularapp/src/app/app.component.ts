@@ -8,7 +8,7 @@ import { Employee } from './models/employee';
 })
 export class AppComponent {
   title = 'angularapp';
-  name="Smith";
+  hero:string="Smith";
   empCount;
   test='I am div with innerHTML';
   parentToChild :string="i am Coming From parent";
