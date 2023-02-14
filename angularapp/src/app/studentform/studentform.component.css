@@ -1,0 +1,50 @@
+.login-page{
+    max-width: 800px;
+    margin: 50px auto 0 auto;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.form-val{
+    margin-top: 10px;
+}
+.material-symbols-outlined.md-80 { font-size: 80px;
+color: darkslategrey;
+
+}
+.title{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+ 
+}
+.college{
+  padding-top: 5px;
+  margin-left: 10px;
+  font-weight: bolder;
+  
+}
+.dem{
+    color: rgb(172, 172, 172);
+    font-weight: normal;
+}
+#left{
+ text-align: right;
+ margin-left: 250px;
+ font-size: medium;
+ margin-top: 5px;
+}
+h2{
+    font-weight: 200;
+}
+#drop{
+    background-color:grey;
+}
+.label{
+    font-weight: 550;
+}
+textarea{
+    color: grey;
+}

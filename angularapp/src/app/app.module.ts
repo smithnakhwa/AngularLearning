@@ -45,7 +45,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { StudentformComponent } from './studentform/studentform.component';
-
+import {MatExpansionModule} from '@angular/material/expansion';
+import { MatFormFieldModule } from "@angular/material/form-field";
 @NgModule({
   declarations: [
     AppComponent,
@@ -93,7 +94,10 @@ import { StudentformComponent } from './studentform/studentform.component';
     MatRadioModule,
     MatCheckboxModule,
     MatStepperModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatExpansionModule,
+    MatFormFieldModule
+    
 
   ],
   providers: [],
