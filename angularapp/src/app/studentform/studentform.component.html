@@ -18,12 +18,16 @@ school
     </mat-expansion-panel-header>
     <p><mat-card-content>
       <form class="login-form" #loginForm="ngForm">
+      
         <label class="label">Full Name</label>
      
           <table class="example-full-width" cellspacing="0"><tr>
             <td><mat-form-field class="example-full-width">
-              <mat-label>First name</mat-label>
-              <input matInput ngModel type="text" name="firstname" placeholder="" required />
+              <mat-label>email</mat-label>
+              <input matInput #email="ngModel"  ngModel type="email" name="firstname"  pattern="[a-z0-9.]+@codemindtechnology.com" placeholder="" required minlength="3" maxlength="50" />
+              <mat-error *ngIf="email.errors?.required">The firstname is required</mat-error>
+              <mat-error *ngIf="email.errors?.minlength">your firstname must {{firstname.errors?.minlength.requiredLength}} chars , but it only has {{firstname.errors?.minlength.actualLength}} chars</mat-error>
+              <mat-error *ngIf="email.errors?.pattern">Please enter a valid domin email</mat-error>
             </mat-form-field></td>
             <td><mat-form-field class="example-full-width">
               <mat-label>Middle Name</mat-label>
@@ -42,7 +46,7 @@ school
           <tr>
             <td><mat-form-field class="example-full-width">
               <mat-label>Student Number</mat-label>
-              <input matInput ngModel type="text" name="firstname" placeholder="" maxlength="10" required />
+              <input matInput ngModel type="text" name="studnum" placeholder="" maxlength="10" required />
               <mat-hint align="start"><strong>for ex-> 9372534567</strong> </mat-hint>
 
             </mat-form-field></td>
@@ -50,15 +54,20 @@ school
             <td>
               <mat-form-field class="example-full-width">
 
-                <mat-label>Select Year Level</mat-label>
-                <mat-select required>
-                  <mat-option value="one">F.Y</mat-option>
-                  <mat-option value="two">S.Y</mat-option>
-                  <mat-option value="two">T.Y</mat-option>
+                <mat-label >Select an Course</mat-label>
+                <mat-select  [ngModel]="default"  name="select" required >
+                  <mat-option *ngFor="let course of courses" value="{{course}}">{{course}}</mat-option>
+                
                 </mat-select>
               <mat-hint align="start"><strong>for ex-> F.Y, S.Y, T.Y</strong> </mat-hint>
             </mat-form-field>
          
+          </td>
+          <td>
+            <div class="form-group" *ngFor="let gender of genders">
+              <input type="radio" name="gender" id="gender" value="{{gender.value}}" [ngModel]="defaultgender" class="custom-cntrol custom-radio" >
+              <label for="{{gender.id}}">{{gender.value}}</label>
+            </div>
           </td>
           </tr>
           <br>
@@ -80,11 +89,14 @@ school
               <mat-label>State</mat-label>
               <input matInput placeholder="Ex. California" required>
             </mat-form-field></td>
-            <td><mat-form-field class="example-full-width">
+            <td>
+              <mat-form-field class="example-full-width">
               <mat-label>Postal Code</mat-label>
-              <input matInput #postalCode maxlength="6" placeholder="400702" required>
-            </mat-form-field></td>
-          </tr>
+              <input matInput ngModel name="pincode" #postalCode="ngModel"  maxlength="6" placeholder="400702" required>
+              <mat-error *ngIf="postalCode.errors?.required">The PostalCode is mandotary</mat-error>
+              </mat-form-field>
+             </td>
+            </tr>
         </table>
   
        
@@ -96,5 +108,17 @@ school
     </mat-card-content></p>
   </mat-expansion-panel>
 </mat-accordion>
+<div class="row justify-content-center mt2" *ngIf="isSubmitted">
+  <div class="col-md-6rounded shadow py-4">
+    <h2>Form Data</h2>
+    <p>firstname:<strong>{{formData.firstname}}</strong></p>
+    <p>middlename:<strong>{{formData.middlename}}</strong></p>
+    <p>lastname:<strong>{{formData.lastname}}</strong></p>
+    <p>studnum:<strong>{{formData.studnum}}</strong></p>
+    <p>pincode:<strong>{{formData.pincode}}</strong></p>
+
+  </div>
+</div>
+
 
 

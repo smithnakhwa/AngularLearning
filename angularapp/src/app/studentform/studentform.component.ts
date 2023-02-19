@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-studentform',
@@ -9,12 +10,51 @@ import { NgForm } from '@angular/forms';
 export class StudentformComponent implements OnInit {
 
   constructor() { }
+  formData={
+    firstname:'',
+    middlename:'',
+    lastname:'',
+    studnum:'',
+    pincode:''
+
+  }
+  isSubmitted:boolean =false;
 
   ngOnInit() {
   }
   onClick(form: NgForm){
-    console.log(form.value);
+    console.log(form);
+    this.formData.firstname=form.value.firstname;
+    this.formData.middlename=form.value.middlename;
+    this.formData.lastname=form.value.lastname;
+    this.formData.studnum=form.value.studnum;
+    this.formData.pincode=form.value.pincode;
+
+
+    this.isSubmitted=true;
+    form.reset({gender:this.defaultgender,select:this.default});
+    
+    // other ways to using setValue() or patchValue();
+    // form.reset();
+    // form.controls['select'].setValue('Angular');
+    // form.controls['gender'].patchValue('female');
     
 
+  }
+  default="Angular";
+  defaultgender="female";
+  genders=[
+    {
+      id:1,
+      value:'Male'
+    },
+    {
+      id:2,
+      value:'female'
+    }
+  ];
+  courses=['Angular','JavaScript','TypeScript'];
+  blur(email){
+    if(email.value.substr()){}
   }
 }

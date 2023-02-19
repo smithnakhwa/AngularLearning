@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { Test1Component } from './test1/test1.component';
 import { Test2Component } from './test2/test2.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './card/card.component';
 import { PasswordComponent } from './password/password.component';
 import { OutputDecoratorComponent } from './output-decorator/output-decorator.component';
@@ -47,6 +47,8 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { StudentformComponent } from './studentform/studentform.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { RegformComponent } from './regform/regform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -65,7 +67,9 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     InputComponent,
     NgstylengclassComponent,
     CustomDirective,
-    StudentformComponent
+    StudentformComponent,
+    ReactiveformComponent,
+    RegformComponent
   ],
   imports: [
     BrowserModule,
@@ -96,7 +100,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatStepperModule,
     MatProgressBarModule,
     MatExpansionModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    ReactiveFormsModule
     
 
   ],
