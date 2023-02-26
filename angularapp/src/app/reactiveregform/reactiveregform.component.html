@@ -1,0 +1,75 @@
+
+  <div class="col d-flex justify-content-center">
+    <div class="card mb-3" style="width: 900px; height: 500px;">
+        <div class="row no-gutters">
+       
+          <div class="col-md-6">
+            <div class="card-body">
+                <h2 id="hea">Sign up</h2>
+                <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
+               
+                  
+                    <table cellspacing="0"><tr>
+                      <td><mat-form-field class="example-full-width">
+                        <mat-label>Mail address</mat-label>
+                        <input matInput type="email" formControlName="email">
+                        <mat-error *ngIf="!myReactiveForm.get('email').valid">The Email is mandatory</mat-error>
+                      </mat-form-field></td>
+                     
+                    </tr>
+                    <tr>
+                        <td><mat-form-field class="example-full-width">
+                            <mat-label>Select</mat-label>
+                            <mat-select formControlName="select">
+                              <mat-option value="{{level}}" *ngFor="let level of levels">{{level}}</mat-option>
+                            </mat-select>
+                            <!-- <select formControlName="select">
+                              <option>Basic</option>
+                              <option>Advanced</option>
+                              <option>Pro</option>
+                            </select> -->
+                          </mat-form-field></td>
+                    </tr>
+                    <tr>
+                        <td><mat-form-field class="example-full-width">
+                          <mat-label>Password</mat-label>
+                          <input matInput type="password" formControlName="password">
+                          <mat-error *ngIf="!myReactiveForm.get('password').valid">The Password is mandatory</mat-error>
+                        </mat-form-field></td>
+                       
+                      </tr>
+                      <tr>
+                        <td><mat-form-field class="example-full-width">
+                          <mat-label>Date</mat-label>
+                          <input matInput type="date" formControlName="date" min="2023-02-22">
+                          <mat-error *ngIf="!myReactiveForm.get('date').valid">The Date is mandatory</mat-error>
+                        </mat-form-field></td>
+                       
+                      </tr>
+                </table>
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    </form>
+                    
+            </div>
+          </div>
+          <div class="col-md-6" id="img" >
+            <div class="row justify-content-center mt-2" id="output" *ngIf="isSubmit">
+              <div class="col-md-6 rounded shadow py4">
+                  <h2>Form Data</h2>
+                  <p>Email:<strong> {{myReactiveForm.get('email').value}}
+                      </strong></p>
+                  <p>Level:<strong> {{myReactiveForm.get('select').value}}
+                      </strong></p>
+                  <p>Password:<strong> {{myReactiveForm.get('password').value}}
+                      </strong></p>
+                      <p>Date:<strong> {{myReactiveForm.get('date').value}}
+                      </strong></p>
+    
+              </div>
+          </div>
+
+          </div>
+        </div>
+       
+      </div>
+  </div>

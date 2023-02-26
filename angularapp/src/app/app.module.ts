@@ -49,6 +49,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { RegformComponent } from './regform/regform.component';
+import { ReactiveregformComponent } from './reactiveregform/reactiveregform.component';
+import { PrototypereactiveformComponent } from './prototypereactiveform/prototypereactiveform.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,7 +71,9 @@ import { RegformComponent } from './regform/regform.component';
     CustomDirective,
     StudentformComponent,
     ReactiveformComponent,
-    RegformComponent
+    RegformComponent,
+    ReactiveregformComponent,
+    PrototypereactiveformComponent
   ],
   imports: [
     BrowserModule,

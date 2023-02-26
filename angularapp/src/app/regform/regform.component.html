@@ -87,9 +87,9 @@
                           </svg>&nbsp;&nbsp;<mat-form-field class="example-full-width" style="width: 225px !important;">
                           <mat-label>Password</mat-label>
                           <input matInput #pass1="ngModel" ngModel name="pass1" pass1 type="password" required minlength="8" >
-                          <mat-hint align="start" class="error" *ngIf="isMatch;else elseblock">The password is not match</mat-hint>
+                          <mat-hint align="start" class="text-danger" *ngIf="isMatch;else elseblock">The password is not match</mat-hint>
                           <mat-error *ngIf="pass1.errors?.minlength">Enter 8 Characters password</mat-error>
-                          <mat-hint align="start" class="success" *ngIf="isSuccess">The password is match</mat-hint>
+                          <mat-hint align="start" class="text-success" *ngIf="isSuccess">The password is match</mat-hint>
                         </mat-form-field></td>
                       
                       </tr>
@@ -101,9 +101,9 @@
                           <mat-form-field class="example-full-width" style="width: 225px !important;">
                           <mat-label>Confirm Password</mat-label>
                           <input #pass2="ngModel" matInput ngModel name="pass2" pass2 type="password" required (blur)="onblur(pass1,pass2)" minlength="8" >
-                          <mat-hint align="start" class="error" *ngIf="isMatch">The password is not match</mat-hint>
+                          <mat-hint align="start" class="text-danger" *ngIf="isMatch">The password is not match</mat-hint>
                           <mat-error *ngIf="pass2.errors?.minlength">Enter 8 characters password</mat-error>
-                          <mat-hint align="start" class="success" *ngIf="isSuccess">The password is match</mat-hint>
+                          <mat-hint align="start" class="text-success" *ngIf="isSuccess">The password is match</mat-hint>
 
                         
                       

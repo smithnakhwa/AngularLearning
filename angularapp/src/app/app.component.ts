@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Employee } from './models/employee';
 
 @Component({
@@ -6,7 +6,7 @@ import { Employee } from './models/employee';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit,OnChanges,OnDestroy,DoCheck,AfterViewChecked,AfterViewInit,AfterContentChecked,AfterContentInit{
   title = 'angularapp';
   hero:string="Smith";
   empCount;
@@ -32,6 +32,31 @@ export class AppComponent {
   imageUrl:'http://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
   constructor(){
     this.getValueFromServer();
+  }
+  ngOnInit(): void {
+    this.empCount=100;
+    console.log(`App Component- OnInit`);
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('App Component- OnChanges',changes)
+  }
+  ngOnDestroy(): void {
+    console.log(`App Component- OnDestroy`);
+  }
+  ngDoCheck(): void {
+    console.log(`App Component- DoCheck`);
+  }
+  ngAfterViewChecked(): void {
+    console.log(`App Component- AfterViewChecked`);
+  }
+  ngAfterViewInit(): void {
+    console.log(`App Component- AfterViewInit`);
+  }
+  ngAfterContentChecked(): void {
+    console.log(`App Component- AfterContentChecked`);
+  }
+  ngAfterContentInit(): void {
+    console.log(`App Component- AfterContentInit`);
   }
   ename:string;
   sal:number;

@@ -3,32 +3,49 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmit()">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input types="text"  formControlName="username"class="form control" id="username" >
-                </div>
-                <div class="form-group">
-                    <label for="email">email</label>
-                    <input types="text" formControlName="email" class="form control" id="email" >
+                <div formGroupName="userDeatils">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input types="text" formControlName="username" class="form control" id="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">email</label>
+                        <input types="text" formControlName="email" class="form control" id="email">
+                        <small class="text-danger"
+                            *ngIf="!myReactiveForm.get('userDeatils.email').valid && myReactiveForm.get('userDeatils.email').touched">Please
+                            Enter validate Email</small>
 
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="course">course</label>
-                   <select fromControlName="course" id="course">
-                    <option value="Angular">Angular</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="TypeScript">TypeScript</option>
-                   </select>
+                    <select fromControlName="course" id="course">
+                        <option value="Angular">Angular</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="TypeScript">TypeScript</option> 
+                    </select>
                 </div>
                 <div>
-                    <input type="radio" formControlName="gender" id="male">
+                    <input type="radio" formControlName="Male" id="male">
                     <label for="Male">Male</label>
-                    <input type="radio" formControlName="gender" id="male">
+                    <input type="radio" formControlName="Female" id="male">
                     <label for="Female">FeMale</label>
                 </div>
-                <button  type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
 
             </form>
+            <div class="row justify-content-center mt-2" *ngIf="isSubmit">
+                <div class="col-md-6 rounded shadow py4">
+                    <h2>Form Data</h2>
+                    <p>UserName:<strong> {{myReactiveForm.get('userDeatils.username').value}}
+                        </strong></p>
+                    <p>Email:<strong> {{myReactiveForm.get('userDeatils.email').value}}
+                        </strong></p>
+                    <p>course:<strong> {{myReactiveForm.get('course').value}}
+                        </strong></p>
+
+                </div>
+            </div>
         </div>
     </div>
 </div>

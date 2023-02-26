@@ -1,0 +1,15 @@
+.card{
+    margin-top: 50px;
+}
+#img{
+    background-image: url('https://images.pexels.com/photos/1032650/pexels-photo-1032650.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') ;
+    width : 450px ;
+     height: 500px ; 
+
+}
+#output{
+    color: white;
+}
+#hea{
+    color: black;
+}
