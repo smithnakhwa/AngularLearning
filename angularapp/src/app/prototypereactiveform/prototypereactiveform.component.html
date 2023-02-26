@@ -1,0 +1,144 @@
+<div class="col d-flex justify-content-center">
+    <div class="card mb-3" style="max-width: 2000px;">
+        <div class="row no-gutters">
+    
+          <div class="col-md-8">
+            <div class="card-body">
+                <form [formGroup]="myreactiveFrom" (ngSubmit)="onSubmit()">
+                    <div class="col-md-3">
+                        <img src="https://randomuser.me/api/portraits/lego/3.jpg" alt="...">
+                        <div>
+                            <p id="Name">Homero Simpson</p>
+                            <p id="content">Lorem ipsum is simply dummy text  &nbsp;&nbsp;of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                        </div>
+                    </div>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>User details</th>
+                        </tr>
+                    </thead>
+                    <tbody formGroupName="userDetails">
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Full Name</mat-label>
+                                <input matInput formControlName="fullName">
+                                <mat-error *ngIf="!myreactiveFrom.get('userDetails.fullName').valid"> FullName is Required</mat-error>
+                            </mat-form-field>
+                          </div>
+                          <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Your birthday</mat-label>
+                                <input matInput formControlName="birthday" type="date" placeholder="">
+                                <mat-error *ngIf="!myreactiveFrom.get('userDetails.birthday').valid"> birthday is Required</mat-error>
+
+                            </mat-form-field>
+                          </div>
+                          <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Gender</mat-label>
+                                <mat-select formControlName="gender"> 
+                                  <mat-option value="option" *ngFor="let gender of genders">{{gender}}</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="!myreactiveFrom.get('userDetails.gender').valid"> gender is Required</mat-error>
+
+                              </mat-form-field>
+                          </div>
+                          <div class="form-group1">
+                            <mat-form-field id="country">
+                                <mat-label>Country</mat-label>
+                                <mat-select formControlName="country">
+                                  <mat-option value="{{country.id}}" *ngFor="let country of countries">{{country.value}}</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="!myreactiveFrom.get('userDetails.country').valid">country is Required</mat-error>
+
+                              </mat-form-field>
+                            <mat-form-field id="phone">
+                                <mat-label>Phone</mat-label>
+                                <input matInput formControlName="phone" type="tel" (change)="onPhoneCheck()" >
+                                <mat-hint align="start" *ngIf="!isPhone">Mobile: 094 231 234</mat-hint>
+                                <mat-error *ngIf="myreactiveFrom.get('userDetails.phone').errors?.required"> phone is Required</mat-error>
+                                <mat-hint align="start" class="text-danger" *ngIf="isPhone">Phone incorrect for the selected country </mat-hint>
+
+                                <mat-hint align="end" *ngIf="!isPhone">Fixed: 2123 1234</mat-hint>
+
+                            </mat-form-field>
+                          </div>
+                          <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Bio</mat-label>
+                                <textarea matInput formControlName="bio" rows="4"></textarea>
+                                <mat-hint align="start">Tell us about yourself</mat-hint>
+                                <mat-hint align="end">{{myreactiveFrom.get('userDetails.bio').value.length }}/256</mat-hint>
+
+
+                              </mat-form-field>
+                          </div>
+
+                    </tbody>
+                  </table>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>Account details</th>
+                        </tr>
+                    </thead>
+                    <tbody formGroupName="accountDetails">
+                        <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Username</mat-label>
+                                <input matInput formControlName="userName" (blur)="onUnqiue()">
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.userName').errors?.required">useerName is Required</mat-error>
+                                <mat-hint aglin="start" *ngIf="isUnqiue" class="text-danger">The UserName already exits</mat-hint>
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.userName').errors?.minlength">UserName must be at least 5 characters long</mat-error>
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.userName').errors?.pattern">Your username must contain only numbers and letters</mat-error>
+
+                            </mat-form-field>
+                          </div>
+                          <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Email</mat-label>
+                                <input matInput formControlName="email">
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.email').errors?.required">email is Required</mat-error>
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.email').errors?.email">Enter a valid email</mat-error>
+
+                            </mat-form-field>
+                          </div>
+                          <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Password</mat-label>
+                                <input matInput formControlName="password" type="password">
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.password').errors?.required">password is Required</mat-error>
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.password').errors?.minlength">Passsword must be at least 5 characters long</mat-error>
+
+                                <mat-error *ngIf="myreactiveFrom.get('accountDetails.password').errors?.pattern">Your password must contain at least one uppercase, one lowercase, and one number</mat-error>
+
+                            </mat-form-field>
+                          </div>
+                          <div class="form-group">
+                            <mat-form-field class="example-full-width">
+                                <mat-label>Confirm Password</mat-label>
+                                <input matInput formControlName="confirmPassword" type="password" (change)="onMatch()">
+                                <mat-error *ngIf="!myreactiveFrom.get('accountDetails.confirmPassword').valid">confirmPassword is Required</mat-error>
+                                <mat-hint align="start" class="text-danger" *ngIf="isMatch">The password is not matching</mat-hint>
+                                <mat-hint align="start" class="text-success" *ngIf="isMatchsuc">password mismatch</mat-hint>
+
+
+                            </mat-form-field>
+                          </div>
+                          
+                          <mat-checkbox formControlName="term">I accept terms and conditions</mat-checkbox>
+                          <div class="form-group">
+                            <button type="submit" mat-stroked-button id="btn" (click)="onClick()">Submit</button>
+                          </div>
+                          
+                    </tbody>
+                  </table>
+                                  
+                </form>
+               
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
