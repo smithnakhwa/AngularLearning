@@ -1,5 +1,6 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Employee } from './models/employee';
+import { MyServiceService } from './my-service.service';
 
 @Component({
   selector: 'app-root',
@@ -29,8 +30,9 @@ export class AppComponent implements OnInit,OnChanges,OnDestroy,DoCheck,AfterVie
     dept:'ËXTC',
 
   }
+  products=this.obj.products;
   imageUrl:'http://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
-  constructor(){
+  constructor(private obj:MyServiceService){
     this.getValueFromServer();
   }
   ngOnInit(): void {

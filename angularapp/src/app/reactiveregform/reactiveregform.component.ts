@@ -45,7 +45,7 @@ export class ReactiveregformComponent implements OnInit,OnChanges,OnDestroy,DoCh
 
     this.myReactiveForm=new FormGroup({
       'email':new FormControl(null,[Validators.email,Validators.required]),
-      'select':new FormControl('Advanced'),
+      'select':new FormControl('pro'),
       'password':new FormControl(null,[Validators.required]),
       'date':new FormControl(null,[Validators.required]),
       

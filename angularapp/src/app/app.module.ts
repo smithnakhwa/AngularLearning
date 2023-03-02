@@ -51,6 +51,7 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { RegformComponent } from './regform/regform.component';
 import { ReactiveregformComponent } from './reactiveregform/reactiveregform.component';
 import { PrototypereactiveformComponent } from './prototypereactiveform/prototypereactiveform.component';
+import { ScrollComponent } from './scroll/scroll.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +74,8 @@ import { PrototypereactiveformComponent } from './prototypereactiveform/prototyp
     ReactiveformComponent,
     RegformComponent,
     ReactiveregformComponent,
-    PrototypereactiveformComponent
+    PrototypereactiveformComponent,
+    ScrollComponent
   ],
   imports: [
     BrowserModule,

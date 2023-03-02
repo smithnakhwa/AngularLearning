@@ -1,4 +1,4 @@
-<p>reactiveform works!</p>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
@@ -6,32 +6,44 @@
                 <div formGroupName="userDeatils">
                     <div class="form-group">
                         <label for="username">Username</label>
-                        <input types="text" formControlName="username" class="form control" id="username">
+                        <input types="text" formControlName="username" class="form-control" id="username">
+                        <small  class="text-danger" *ngIf="!myReactiveForm.get('userDeatils.username').valid && myReactiveForm.get('userDeatils.username').touched">
+                            <span *ngIf="myReactiveForm.get('userDeatils.username').errors['required']">the Username is Required</span>
+                            <span *ngIf="myReactiveForm.get('userDeatils.username').errors['namesNotAllowed']">  {{myReactiveForm.get('userDeatils.username').value}} is Not Allowed</span>
+                          
+                        </small>
                     </div>
                     <div class="form-group">
                         <label for="email">email</label>
-                        <input types="text" formControlName="email" class="form control" id="email">
-                        <small class="text-danger"
-                            *ngIf="!myReactiveForm.get('userDeatils.email').valid && myReactiveForm.get('userDeatils.email').touched">Please
-                            Enter validate Email</small>
+                        <input types="text" formControlName="email" class="form-control" id="email">
+                        <small  class="text-danger" *ngIf="!myReactiveForm.get('userDeatils.email').valid && myReactiveForm.get('userDeatils.email').touched">
+                            <span *ngIf="myReactiveForm.get('userDeatils.email').errors['required']">the Email is Required</span>
+                            <span *ngIf="myReactiveForm.get('userDeatils.email').errors['emailNotAllowed']">  {{myReactiveForm.get('userDeatils.email').value}} is Email is already taken</span>
+                          
+                        </small>
 
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="course">course</label>
-                    <select fromControlName="course" id="course">
+                    <select formControlName="course" id="course" class="form-control">
                         <option value="Angular">Angular</option>
                         <option value="JavaScript">JavaScript</option>
                         <option value="TypeScript">TypeScript</option> 
                     </select>
                 </div>
-                <div>
-                    <input type="radio" formControlName="Male" id="male">
-                    <label for="Male">Male</label>
-                    <input type="radio" formControlName="Female" id="male">
-                    <label for="Female">FeMale</label>
+                <div class="form-group" formArrayName="skills">
+                    <label>skills</label>
+                    <ng-container *ngFor="let skill of myReactiveForm.get('skills').controls;index as i">
+                        <input type="text" class="form-control" placeholder="Add Skill" formControlName="{{i}}">
+
+                    </ng-container>
+                    <button class="btn btn-light btn-small mt-4" (click)="onSkills()"><i>+</i>Add Skills</button>
+         
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+         
+                <button type="submit" class="btn btn-primary mt-2">Submit</button>
 
             </form>
             <div class="row justify-content-center mt-2" *ngIf="isSubmit">

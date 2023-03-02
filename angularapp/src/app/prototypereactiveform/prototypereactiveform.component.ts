@@ -55,7 +55,7 @@ unqiue=[];
       'userDetails':new FormGroup({
         'fullName':new FormControl(null,[Validators.required]),
         'birthday':new FormControl('',[Validators.required]),
-        'gender':new FormControl(null,[Validators.required]),
+        'gender':new FormControl('Female',[Validators.required]),
         'country':new FormControl(null,[Validators.required]),
         'phone':new FormControl(null,[Validators.required]),
         'bio':new FormControl('Lorem ipsum is simply dummy text  of the printing and typesetting industry. Lorem ipsum has been the industry standard dummy text ever since the 1500s',[Validators.maxLength(256)]),

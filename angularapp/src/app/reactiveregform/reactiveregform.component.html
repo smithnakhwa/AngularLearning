@@ -21,7 +21,11 @@
                         <td><mat-form-field class="example-full-width">
                             <mat-label>Select</mat-label>
                             <mat-select formControlName="select">
-                              <mat-option value="{{level}}" *ngFor="let level of levels">{{level}}</mat-option>
+                              <mat-option value="Basic">Basic</mat-option>
+                              <mat-option value="Advanced">Advanced</mat-option>
+
+                              <mat-option value="pro">pro</mat-option>
+
                             </mat-select>
                             <!-- <select formControlName="select">
                               <option>Basic</option>

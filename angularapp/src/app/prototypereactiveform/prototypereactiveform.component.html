@@ -43,6 +43,9 @@
                                 <mat-error *ngIf="!myreactiveFrom.get('userDetails.gender').valid"> gender is Required</mat-error>
 
                               </mat-form-field>
+                              <!-- <select formControlName="gender">
+                                <option value="{{gender}}" *ngFor="let gender of genders">{{gender}}</option>
+                              </select> -->
                           </div>
                           <div class="form-group1">
                             <mat-form-field id="country">

@@ -39,8 +39,12 @@
 <app-ngstylengclass></app-ngstylengclass>
 <app-test2 [fromparent]="hero"></app-test2>
 <mat-slide-toggle>toggle me"</mat-slide-toggle> -->
-<!-- <app-studentform></app-studentform> -->
+<app-studentform></app-studentform>
 <!-- <app-reactiveform></app-reactiveform> -->
-<!-- <app-regform></app-regform> -->
-<!-- <app-reactiveregform></app-reactiveregform> -->
-<app-prototypereactiveform></app-prototypereactiveform>
+<!-- <app-regform></app-regform>
+<app-reactiveregform></app-reactiveregform>
+<app-prototypereactiveform></app-prototypereactiveform> -->
+<!-- <app-scroll></app-scroll> -->
+<ng-container *ngFor="let product of products">
+  <p>Product Name: <strong class="text-success">{{product.name}}</strong></p>
+</ng-container>
