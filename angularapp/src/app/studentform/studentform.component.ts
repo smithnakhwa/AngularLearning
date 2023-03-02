@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { from } from 'rxjs';
+import { MyServiceService } from '../my-service.service';
 
 @Component({
   selector: 'app-studentform',
@@ -9,7 +10,7 @@ import { from } from 'rxjs';
 })
 export class StudentformComponent implements OnInit {
 
-  constructor() { }
+  constructor(private objservice:MyServiceService) { }
   formData={
     firstname:'',
     middlename:'',
@@ -21,6 +22,8 @@ export class StudentformComponent implements OnInit {
   isSubmitted:boolean =false;
 
   ngOnInit() {
+
+    this.objservice.print();
   }
   onClick(form: NgForm){
     console.log(form);
@@ -57,4 +60,11 @@ export class StudentformComponent implements OnInit {
   blur(email){
     if(email.value.substr()){}
   }
+  calculateAge(){
+   
+    this.showAge=this.objservice.ageCalculator(this.age);
+
+  }
+  age;
+  showAge;
 }
