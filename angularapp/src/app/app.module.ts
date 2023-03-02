@@ -52,6 +52,7 @@ import { RegformComponent } from './regform/regform.component';
 import { ReactiveregformComponent } from './reactiveregform/reactiveregform.component';
 import { PrototypereactiveformComponent } from './prototypereactiveform/prototypereactiveform.component';
 import { ScrollComponent } from './scroll/scroll.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -107,7 +108,8 @@ import { ScrollComponent } from './scroll/scroll.component';
     MatProgressBarModule,
     MatExpansionModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
     
 
   ],

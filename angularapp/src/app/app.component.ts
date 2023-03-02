@@ -1,4 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { DemoserviceService } from './demoservice.service';
 import { Employee } from './models/employee';
 import { MyServiceService } from './my-service.service';
 
@@ -32,12 +33,56 @@ export class AppComponent implements OnInit,OnChanges,OnDestroy,DoCheck,AfterVie
   }
   products=this.obj.products;
   imageUrl:'http://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
-  constructor(private obj:MyServiceService){
+  constructor(private obj:MyServiceService,private demoservice:DemoserviceService){
     this.getValueFromServer();
   }
+  keys=[];
+  values=[];
+  result=[];
+
   ngOnInit(): void {
-    this.empCount=100;
-    console.log(`App Component- OnInit`);
+    this.demoservice.getUsers().subscribe(res=>{
+      console.log('user api result',res);
+      const iterate=(obj)=>{
+        Object.keys(obj).forEach(key=> {
+          if(typeof obj[key]==='object' && obj[key] !==null)
+          {
+            iterate(obj[key]);
+          }
+          else{
+            this.values.push(obj[key]);
+            this.keys.push(key);
+
+          }
+        })
+      }
+      for (let index = 0; index < res.length; index++) {
+        this.values=[];
+        this.keys=[];
+        iterate(res[index]);
+        // this.result.push([this.keys]);
+        this.result[index]=this.values;
+        
+        
+      }
+      console.log(this.result);
+      
+   
+      console.log(this.values);
+      console.log(this.keys);
+      
+      console.log(res);
+
+
+      
+
+      
+    },
+    err=>{
+      console.log(err);
+      
+    } )
+    
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('App Component- OnChanges',changes)
