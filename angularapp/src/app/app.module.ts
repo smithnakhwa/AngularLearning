@@ -53,6 +53,10 @@ import { ReactiveregformComponent } from './reactiveregform/reactiveregform.comp
 import { PrototypereactiveformComponent } from './prototypereactiveform/prototypereactiveform.component';
 import { ScrollComponent } from './scroll/scroll.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PipeexampleComponent } from './pipeexample/pipeexample.component';
+import { CustompipePipe } from './custompipe.pipe';
+import { SearchpipePipe } from './searchpipe.pipe';
+import { ProductFilterComponent } from './product-filter/product-filter.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -76,7 +80,11 @@ import { HttpClientModule } from '@angular/common/http';
     RegformComponent,
     ReactiveregformComponent,
     PrototypereactiveformComponent,
-    ScrollComponent
+    ScrollComponent,
+    PipeexampleComponent,
+    CustompipePipe,
+    SearchpipePipe,
+    ProductFilterComponent
   ],
   imports: [
     BrowserModule,

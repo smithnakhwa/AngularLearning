@@ -8,7 +8,7 @@ import { MyServiceService } from './my-service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit,OnChanges,OnDestroy,DoCheck,AfterViewChecked,AfterViewInit,AfterContentChecked,AfterContentInit{
+export class AppComponent implements OnInit{
   title = 'angularapp';
   hero:string="Smith";
   empCount;
@@ -56,27 +56,14 @@ export class AppComponent implements OnInit,OnChanges,OnDestroy,DoCheck,AfterVie
           }
         })
       }
-      for (let index = 0; index < res.length; index++) {
+      for (let index = 0; index <15; index++) {
         this.values=[];
         this.keys=[];
         iterate(res[index]);
-        // this.result.push([this.keys]);
         this.result[index]=this.values;
         
         
-      }
-      console.log(this.result);
-      
-   
-      console.log(this.values);
-      console.log(this.keys);
-      
-      console.log(res);
-
-
-      
-
-      
+      }    
     },
     err=>{
       console.log(err);
@@ -84,27 +71,7 @@ export class AppComponent implements OnInit,OnChanges,OnDestroy,DoCheck,AfterVie
     } )
     
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('App Component- OnChanges',changes)
-  }
-  ngOnDestroy(): void {
-    console.log(`App Component- OnDestroy`);
-  }
-  ngDoCheck(): void {
-    console.log(`App Component- DoCheck`);
-  }
-  ngAfterViewChecked(): void {
-    console.log(`App Component- AfterViewChecked`);
-  }
-  ngAfterViewInit(): void {
-    console.log(`App Component- AfterViewInit`);
-  }
-  ngAfterContentChecked(): void {
-    console.log(`App Component- AfterContentChecked`);
-  }
-  ngAfterContentInit(): void {
-    console.log(`App Component- AfterContentInit`);
-  }
+  
   ename:string;
   sal:number;
   getValueFromServer(){

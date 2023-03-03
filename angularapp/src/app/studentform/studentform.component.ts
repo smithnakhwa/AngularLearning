@@ -35,7 +35,7 @@ export class StudentformComponent implements OnInit {
 
 
     this.isSubmitted=true;
-    form.reset({gender:this.defaultgender,select:this.default});
+    form.reset();
     
     // other ways to using setValue() or patchValue();
     // form.reset();
