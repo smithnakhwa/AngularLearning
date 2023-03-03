@@ -26,6 +26,8 @@ export class AppComponent implements OnInit{
   }
 ]
 
+
+
   data = {
     name:'Smith',
     dept:'ËXTC',
@@ -36,34 +38,36 @@ export class AppComponent implements OnInit{
   constructor(private obj:MyServiceService,private demoservice:DemoserviceService){
     this.getValueFromServer();
   }
-  keys=[];
-  values=[];
+  // keys=[];
+  // values=[];
   result=[];
+  searchName:string='';
 
   ngOnInit(): void {
     this.demoservice.getUsers().subscribe(res=>{
       console.log('user api result',res);
-      const iterate=(obj)=>{
-        Object.keys(obj).forEach(key=> {
-          if(typeof obj[key]==='object' && obj[key] !==null)
-          {
-            iterate(obj[key]);
-          }
-          else{
-            this.values.push(obj[key]);
-            this.keys.push(key);
+      this.result=res;
+      // const iterate=(obj)=>{
+      //   Object.keys(obj).forEach(key=> {
+      //     if(typeof obj[key]==='object' && obj[key] !==null)
+      //     {
+      //       iterate(obj[key]);
+      //     }
+      //     else{
+      //       this.values.push(obj[key]);
+      //       this.keys.push(key);
 
-          }
-        })
-      }
-      for (let index = 0; index <15; index++) {
-        this.values=[];
-        this.keys=[];
-        iterate(res[index]);
-        this.result[index]=this.values;
+      //     }
+      //   })
+      // }
+      // for (let index = 0; index <15; index++) {
+      //   this.values=[];
+      //   this.keys=[];
+      //   iterate(res[index]);
+      //   this.result[index]=this.values;
         
         
-      }    
+      // }    
     },
     err=>{
       console.log(err);
