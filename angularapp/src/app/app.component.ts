@@ -1,6 +1,7 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { DemoserviceService } from './demoservice.service';
 import { Employee } from './models/employee';
+import { Stock } from './models/stock';
 import { MyServiceService } from './my-service.service';
 
 @Component({
@@ -24,7 +25,7 @@ export class AppComponent implements OnInit{
     title:'Plam Tree',
     contect: 'I Love this tree'
   }
-]
+];
 
 
 
@@ -33,47 +34,52 @@ export class AppComponent implements OnInit{
     dept:'ËXTC',
 
   }
-  products=this.obj.products;
+  // products=this.obj.products;
   imageUrl:'http://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
-  constructor(private obj:MyServiceService,private demoservice:DemoserviceService){
+  // constructor(private obj:MyServiceService,private demoservice:DemoserviceService){
+    constructor(){
     this.getValueFromServer();
   }
   // keys=[];
   // values=[];
   result=[];
   searchName:string='';
+  public stock:Stock;
 
   ngOnInit(): void {
-    this.demoservice.getUsers().subscribe(res=>{
-      console.log('user api result',res);
-      this.result=res;
-      // const iterate=(obj)=>{
-      //   Object.keys(obj).forEach(key=> {
-      //     if(typeof obj[key]==='object' && obj[key] !==null)
-      //     {
-      //       iterate(obj[key]);
-      //     }
-      //     else{
-      //       this.values.push(obj[key]);
-      //       this.keys.push(key);
+     this.stock=new Stock('Test stock company','TSC',85,90);
 
-      //     }
-      //   })
-      // }
-      // for (let index = 0; index <15; index++) {
-      //   this.values=[];
-      //   this.keys=[];
-      //   iterate(res[index]);
-      //   this.result[index]=this.values;
+  //   this.demoservice.getUsers().subscribe(res=>{
+  //     console.log('user api result',res);
+  //     this.result=res;
+  //     // const iterate=(obj)=>{
+  //     //   Object.keys(obj).forEach(key=> {
+  //     //     if(typeof obj[key]==='object' && obj[key] !==null)
+  //     //     {
+  //     //       iterate(obj[key]);
+  //     //     }
+  //     //     else{
+  //     //       this.values.push(obj[key]);
+  //     //       this.keys.push(key);
+
+  //     //     }
+  //     //   })
+  //     // }
+  //     // for (let index = 0; index <15; index++) {
+  //     //   this.values=[];
+  //     //   this.keys=[];
+  //     //   iterate(res[index]);
+  //     //   this.result[index]=this.values;
         
         
-      // }    
-    },
-    err=>{
-      console.log(err);
+  //     // }
+  //   },
+  //   err=>{
+  //     console.log(err);
       
-    } )
+  //   } )
     
+  // }
   }
   
   ename:string;

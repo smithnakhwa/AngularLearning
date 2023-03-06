@@ -1,0 +1,19 @@
+
+
+<div class="card">
+ 
+    <img [src]="wonder.img" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{wonder.title}}</h5>
+      <p class="card-text">{{wonder.content}}</p>
+    </div>
+    <div class="box">
+ 
+         <br>
+         <input type="text" class="ms-3"  placeholder="Enter ID from(1 To 4)" #uname>
+         <button (click)="updateUsername(uname)" class="btn btn-success ms-2" >update</button>
+         <br>
+         <br>
+    
+    </div>
+  </div>

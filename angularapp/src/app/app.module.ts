@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
+import{CommonModule} from '@angular/common'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -57,6 +58,14 @@ import { PipeexampleComponent } from './pipeexample/pipeexample.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { SearchpipePipe } from './searchpipe.pipe';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
+import { StockComponent } from './stock/stock.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NO_ERRORS_SCHEMA } from '@angular/compiler/src/core';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { CreateStockComponent } from './stock/create-stock/create-stock.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,7 +93,13 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
     PipeexampleComponent,
     CustompipePipe,
     SearchpipePipe,
-    ProductFilterComponent
+    ProductFilterComponent,
+    StockComponent,
+    Comp1Component,
+    Comp2Component,
+    Comp3Component,
+    Comp4Component,
+    CreateStockComponent
   ],
   imports: [
     BrowserModule,
@@ -117,11 +132,13 @@ import { ProductFilterComponent } from './product-filter/product-filter.componen
     MatExpansionModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
     
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
