@@ -1,6 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { BooksComponent } from './books/books.component';
+import { Cote2Component } from './books/cote2/cote2.component';
+import { DoglapanComponent } from './books/doglapan/doglapan.component';
+import { ReminderofhimComponent } from './books/reminderofhim/reminderofhim.component';
+import { VictorycityComponent } from './books/victorycity/victorycity.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -25,6 +30,18 @@ const routes: Routes = [
     {path:'watch',component:WatchComponent},
   ]
 },
+{path:'books',
+children:[
+  {path:'',component:BooksComponent},
+  {path:'cote2',component:Cote2Component},
+  {path:'doglapan',component:DoglapanComponent},
+  {path:'victorycity',component:VictorycityComponent},
+  {path:'reminderofhim',component:ReminderofhimComponent},
+
+
+]
+},
+
   {path:'**',component: PagenotfoundComponent}
 ];
 

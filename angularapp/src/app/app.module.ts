@@ -75,6 +75,11 @@ import { MoblieComponent } from './product/moblie/moblie.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { CameraComponent } from './product/camera/camera.component';
+import { BooksComponent } from './books/books.component';
+import { ReminderofhimComponent } from './books/reminderofhim/reminderofhim.component';
+import { DoglapanComponent } from './books/doglapan/doglapan.component';
+import { VictorycityComponent } from './books/victorycity/victorycity.component';
+import { Cote2Component } from './books/cote2/cote2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -117,7 +122,12 @@ import { CameraComponent } from './product/camera/camera.component';
     MoblieComponent,
     LaptopComponent,
     WatchComponent,
-    CameraComponent
+    CameraComponent,
+    BooksComponent,
+    ReminderofhimComponent,
+    DoglapanComponent,
+    VictorycityComponent,
+    Cote2Component
   ],
   imports: [
     BrowserModule,
