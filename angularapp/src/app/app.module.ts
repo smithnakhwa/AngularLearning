@@ -66,6 +66,15 @@ import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { CreateStockComponent } from './stock/create-stock/create-stock.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ProductComponent } from './product/product.component';
+import { MoblieComponent } from './product/moblie/moblie.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { WatchComponent } from './product/watch/watch.component';
+import { CameraComponent } from './product/camera/camera.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,7 +108,16 @@ import { CreateStockComponent } from './stock/create-stock/create-stock.componen
     Comp2Component,
     Comp3Component,
     Comp4Component,
-    CreateStockComponent
+    CreateStockComponent,
+    AboutusComponent,
+    ContactusComponent,
+    HomeComponent,
+    PagenotfoundComponent,
+    ProductComponent,
+    MoblieComponent,
+    LaptopComponent,
+    WatchComponent,
+    CameraComponent
   ],
   imports: [
     BrowserModule,

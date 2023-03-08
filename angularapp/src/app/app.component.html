@@ -120,7 +120,7 @@
 
 <br><br>
 <app-create-stock></app-create-stock> -->
-<div class="row justify-content-center row-cols-1 row-cols-md-2"  style="width:1000px;padding-left: 170px;">
+<!-- <div class="row justify-content-center row-cols-1 row-cols-md-2"  style="width:1000px;padding-left: 170px;">
   <div class="col mb-4">
     <app-comp1></app-comp1>
   </div>
@@ -136,4 +136,16 @@
  
 <app-comp4></app-comp4>
   </div>
-</div>
+</div> -->
+<header>
+  <nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a routerLinkActive="active" routerLink="/home" class="nav-link">Home</a></li>
+
+      <li class="nav-item"><a routerLinkActive="active" routerLink="/aboutus" class="nav-link">About Us</a></li>
+      <li class="nav-item"><a routerLinkActive="active" routerLink="/contactus" class="nav-link">Contact Us</a></li>
+      <li class="nav-item"><a routerLinkActive="active" routerLink="/product" class="nav-link">Product</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
