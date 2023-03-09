@@ -10,4 +10,7 @@ export class DemoserviceService {
   getUsers(){
    return this.httpClient.get(this.apiUrl);
   }
+  getUserById(id:number){
+    return this.httpClient.get(this.apiUrl+'/'+id)
+  }
 }

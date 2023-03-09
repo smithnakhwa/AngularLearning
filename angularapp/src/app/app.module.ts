@@ -80,6 +80,10 @@ import { ReminderofhimComponent } from './books/reminderofhim/reminderofhim.comp
 import { DoglapanComponent } from './books/doglapan/doglapan.component';
 import { VictorycityComponent } from './books/victorycity/victorycity.component';
 import { Cote2Component } from './books/cote2/cote2.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { DemouserComponent } from './demouser/demouser.component';
+import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -127,7 +131,11 @@ import { Cote2Component } from './books/cote2/cote2.component';
     ReminderofhimComponent,
     DoglapanComponent,
     VictorycityComponent,
-    Cote2Component
+    Cote2Component,
+    DemopostComponent,
+    DemopostdetailsComponent,
+    DemouserComponent,
+    DemouserdetailsComponent
   ],
   imports: [
     BrowserModule,

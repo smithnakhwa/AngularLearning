@@ -7,6 +7,11 @@ import { DoglapanComponent } from './books/doglapan/doglapan.component';
 import { ReminderofhimComponent } from './books/reminderofhim/reminderofhim.component';
 import { VictorycityComponent } from './books/victorycity/victorycity.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DemoComponent } from './demo/demo.component';
+import { DemopostComponent } from './demopost/demopost.component';
+import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
+import { DemouserComponent } from './demouser/demouser.component';
+import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
@@ -41,6 +46,13 @@ children:[
 
 ]
 },
+{
+ path:'post',component:DemopostComponent
+},
+{path:'postdetails/:id',component:DemopostdetailsComponent},
+{path:'user',component:DemouserComponent},
+{path:'userdetails/:id',component:DemouserdetailsComponent},
+
 
   {path:'**',component: PagenotfoundComponent}
 ];
