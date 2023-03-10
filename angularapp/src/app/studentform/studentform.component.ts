@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { from } from 'rxjs';
 import { MyServiceService } from '../my-service.service';
 
@@ -10,7 +11,7 @@ import { MyServiceService } from '../my-service.service';
 })
 export class StudentformComponent implements OnInit {
 
-  constructor(private objservice:MyServiceService) { }
+  constructor(private objservice:MyServiceService,private router:Router) { }
   formData={
     firstname:'',
     middlename:'',
@@ -26,6 +27,7 @@ export class StudentformComponent implements OnInit {
     this.objservice.print();
   }
   onClick(form: NgForm){
+    this.router.navigate(['/usersdetails']);
     console.log(form);
     this.formData.firstname=form.value.firstname;
     this.formData.middlename=form.value.middlename;

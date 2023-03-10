@@ -23,11 +23,10 @@ school
      
           <table class="example-full-width" cellspacing="0"><tr>
             <td><mat-form-field class="example-full-width">
-              <mat-label>email</mat-label>
-              <input matInput #email="ngModel"  ngModel type="email" name="firstname"  pattern="[a-z0-9.]+@codemindtechnology.com" placeholder="" required minlength="3" maxlength="50" />
+              <mat-label>firstName</mat-label>
+              <input matInput #email="ngModel"  ngModel type="text" name="firstname"  placeholder="" required minlength="3" maxlength="50" />
               <mat-error *ngIf="email.errors?.required">The firstname is required</mat-error>
               <mat-error *ngIf="email.errors?.minlength">your firstname must {{firstname.errors?.minlength.requiredLength}} chars , but it only has {{firstname.errors?.minlength.actualLength}} chars</mat-error>
-              <mat-error *ngIf="email.errors?.pattern">Please enter a valid domin email</mat-error>
             </mat-form-field></td>
             <td><mat-form-field class="example-full-width">
               <mat-label>Middle Name</mat-label>

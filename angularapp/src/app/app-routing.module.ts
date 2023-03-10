@@ -13,12 +13,16 @@ import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.comp
 import { DemouserComponent } from './demouser/demouser.component';
 import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.component';
 import { HomeComponent } from './home/home.component';
+import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
 import { MoblieComponent } from './product/moblie/moblie.component';
 import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
+import { RegformComponent } from './regform/regform.component';
+import { StudentformComponent } from './studentform/studentform.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
 const routes: Routes = [
@@ -52,7 +56,9 @@ children:[
 {path:'postdetails/:id',component:DemopostdetailsComponent},
 {path:'user',component:DemouserComponent},
 {path:'userdetails/:id',component:DemouserdetailsComponent},
-
+{path:'usersdetails',component:UserdetailsComponent},
+{path:'login',component:StudentformComponent},
+{path:'order',component:OrderlistComponent},
 
   {path:'**',component: PagenotfoundComponent}
 ];

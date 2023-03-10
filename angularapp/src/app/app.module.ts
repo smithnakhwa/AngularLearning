@@ -84,6 +84,9 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { DemouserComponent } from './demouser/demouser.component';
 import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { ProductModule } from './product/product.module';
+import { OrdersModule } from './orders/orders.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -101,7 +104,6 @@ import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.comp
     NgclassComponent,
     InputComponent,
     NgstylengclassComponent,
-    CustomDirective,
     StudentformComponent,
     ReactiveformComponent,
     RegformComponent,
@@ -122,11 +124,6 @@ import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.comp
     ContactusComponent,
     HomeComponent,
     PagenotfoundComponent,
-    ProductComponent,
-    MoblieComponent,
-    LaptopComponent,
-    WatchComponent,
-    CameraComponent,
     BooksComponent,
     ReminderofhimComponent,
     DoglapanComponent,
@@ -135,7 +132,8 @@ import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.comp
     DemopostComponent,
     DemopostdetailsComponent,
     DemouserComponent,
-    DemouserdetailsComponent
+    DemouserdetailsComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -169,7 +167,9 @@ import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.comp
     MatFormFieldModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    ProductModule,
+    OrdersModule
     
 
   ],
