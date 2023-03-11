@@ -12,6 +12,12 @@ import { DemopostComponent } from './demopost/demopost.component';
 import { DemopostdetailsComponent } from './demopostdetails/demopostdetails.component';
 import { DemouserComponent } from './demouser/demouser.component';
 import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.component';
+import { FashionComponent } from './fashion/fashion.component';
+import { JeansComponent } from './fashion/jeans/jeans.component';
+import { ShirtsComponent } from './fashion/shirts/shirts.component';
+import { ShoesComponent } from './fashion/shoes/shoes.component';
+import { TShirtsComponent } from './fashion/t-shirts/t-shirts.component';
+import { FashiondetailsComponent } from './fashiondetails/fashiondetails.component';
 import { HomeComponent } from './home/home.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
@@ -59,6 +65,17 @@ children:[
 {path:'usersdetails',component:UserdetailsComponent},
 {path:'login',component:StudentformComponent},
 {path:'order',component:OrderlistComponent},
+{path:'fashion',
+children:[
+  {path:'',component:FashionComponent},
+  {path:'jeans',component:JeansComponent},
+  {path:'shirts',component:ShirtsComponent},
+  {path:'shoes',component:ShoesComponent},
+  {path:'t-shirts',component:TShirtsComponent}
+]
+},
+
+{path:'fashiondetails/:id',component:FashiondetailsComponent},
 
   {path:'**',component: PagenotfoundComponent}
 ];

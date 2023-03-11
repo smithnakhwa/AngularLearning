@@ -13,11 +13,12 @@ export class DemopostdetailsComponent implements OnInit {
    post;
   ngOnInit() {
     let id =this.route.snapshot.params['id'];
-    this.postservice.getPostById(id).subscribe(res=>{
-      this.post=res;
-      console.log('get post by id',res);
+    // this.postservice.getPostById(id).subscribe(res=>{
+    //   this.post=res;
+    //   console.log('get post by id',res);
+  
       
-    })
+    // })
     console.log(id);
     
   }

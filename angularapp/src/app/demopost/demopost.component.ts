@@ -13,11 +13,12 @@ export class DemopostComponent implements OnInit {
  arrPost:Posts[]=[];
   ngOnInit() {
     this.postservice.getPost().subscribe(res=>{
-      this.arrPost=res;
-      console.log('post array data ',res);
+      this.arrPost=res.observe;
+      console.log('post array data ',res.observe);
       
 
-    })
+    });
+   
   }
 
 }

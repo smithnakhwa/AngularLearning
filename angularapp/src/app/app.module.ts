@@ -87,6 +87,13 @@ import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.comp
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
+import { FashionComponent } from './fashion/fashion.component';
+import { FashiondetailsComponent } from './fashiondetails/fashiondetails.component';
+import { JeansComponent } from './fashion/jeans/jeans.component';
+import { TShirtsComponent } from './fashion/t-shirts/t-shirts.component';
+import { ShirtsComponent } from './fashion/shirts/shirts.component';
+import { ShoesComponent } from './fashion/shoes/shoes.component';
+import { FashionmoduleModule } from './fashion/fashionmodule.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -133,7 +140,9 @@ import { OrdersModule } from './orders/orders.module';
     DemopostdetailsComponent,
     DemouserComponent,
     DemouserdetailsComponent,
-    UserdetailsComponent
+    UserdetailsComponent,
+    FashiondetailsComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -169,7 +178,8 @@ import { OrdersModule } from './orders/orders.module';
     HttpClientModule,
     CommonModule,
     ProductModule,
-    OrdersModule
+    OrdersModule,
+    FashionmoduleModule
     
 
   ],
