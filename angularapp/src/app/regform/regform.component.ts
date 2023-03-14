@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-regform',
@@ -51,6 +52,9 @@ export class RegformComponent implements OnInit {
     else{
       this.isAge=false;
     }
+  }
+  onClick(form:NgForm){
+    form.reset();
   }
 
 }

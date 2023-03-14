@@ -48,7 +48,10 @@
                           </svg> &nbsp;<mat-form-field class="example-full-width">
                           <mat-label>Email</mat-label>
                           <input matInput #email="ngModel" ngModel email name="email" type="email" required>
-                          <mat-error *ngIf="email.errors?.required">The email is Mandatory</mat-error>
+                          <!-- <mat-error *ngIf="email.errors?.required">The email is Mandatory</mat-error> -->
+                          <!-- <small *ngIf="email.errors?.required">the email is mand</small> -->
+                          <mat-hint align="start" class="error" *ngIf="email.errors?.required">enter between 17 to 20</mat-hint>
+
                         </mat-form-field></td>
                         <td>
                           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
@@ -112,7 +115,7 @@
                       </ng-container>
 
 </table>
-<button type="button" class="btn btn-outline-success" >Sign Up</button>
+<button type="button" (click)="onClick(regForm)" class="btn btn-outline-success" >Sign Up</button>
             </form>
         </div>
         </div>
