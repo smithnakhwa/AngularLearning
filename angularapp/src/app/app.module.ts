@@ -94,6 +94,8 @@ import { TShirtsComponent } from './fashion/t-shirts/t-shirts.component';
 import { ShirtsComponent } from './fashion/shirts/shirts.component';
 import { ShoesComponent } from './fashion/shoes/shoes.component';
 import { FashionmoduleModule } from './fashion/fashionmodule.module';
+import { CustomerModule } from './customer/customer.module';
+import { AdminModule } from './admin/admin.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -179,7 +181,8 @@ import { FashionmoduleModule } from './fashion/fashionmodule.module';
     CommonModule,
     ProductModule,
     OrdersModule,
-    FashionmoduleModule
+    FashionmoduleModule,
+
     
 
   ],
@@ -187,4 +190,9 @@ import { FashionmoduleModule } from './fashion/fashionmodule.module';
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('App Calling');
+    
+   }
+ }

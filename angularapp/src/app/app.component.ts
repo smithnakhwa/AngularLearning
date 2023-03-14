@@ -3,6 +3,7 @@ import { DemoserviceService } from './demoservice.service';
 import { Employee } from './models/employee';
 import { Stock } from './models/stock';
 import { MyServiceService } from './my-service.service';
+import { RapidapiService } from './rapidapi.service';
 
 @Component({
   selector: 'app-root',
@@ -37,11 +38,14 @@ export class AppComponent implements OnInit{
   // products=this.obj.products;
   imageUrl:'http://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
   // constructor(private obj:MyServiceService,private demoservice:DemoserviceService){
-    constructor(){
+    constructor(private finance:RapidapiService){
     this.getValueFromServer();
   }
   // keys=[];
   // values=[];
+  news=[];
+  quotes=[];
+
   result=[];
   searchName:string='';
   public stock:Stock;
@@ -80,6 +84,18 @@ export class AppComponent implements OnInit{
   //   } )
     
   // }
+  this.finance.getFinance().subscribe(res=>{
+    this.news=res.news;
+    this.quotes=res.quotes;
+
+
+    console.log(res);
+    console.log(this.news);
+    console.log(this.quotes);
+    
+    
+    
+  })
   }
   
   ename:string;

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { BooksComponent } from './books/books.component';
 import { Cote2Component } from './books/cote2/cote2.component';
@@ -74,6 +74,9 @@ children:[
   {path:'t-shirts',component:TShirtsComponent}
 ]
 },
+{path:'admin',loadChildren:'./admin/admin.module#AdminModule'},
+{path:'customer',loadChildren:'./customer/customer.module#CustomerModule'},
+
 
 {path:'fashiondetails/:id',component:FashiondetailsComponent},
 
@@ -81,7 +84,7 @@ children:[
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
