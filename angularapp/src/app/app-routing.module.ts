@@ -28,6 +28,7 @@ import { ProductComponent } from './product/product.component';
 import { WatchComponent } from './product/watch/watch.component';
 import { RegformComponent } from './regform/regform.component';
 import { StudentformComponent } from './studentform/studentform.component';
+import { TodoComponent } from './todo/todo.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 
@@ -79,6 +80,7 @@ children:[
 
 
 {path:'fashiondetails/:id',component:FashiondetailsComponent},
+{path:'todo',component:TodoComponent},
 
   {path:'**',component: PagenotfoundComponent}
 ];

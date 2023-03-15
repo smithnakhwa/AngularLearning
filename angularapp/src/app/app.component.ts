@@ -85,8 +85,8 @@ export class AppComponent implements OnInit{
     
   // }
   this.finance.getFinance().subscribe(res=>{
-    this.news=res.news;
-    this.quotes=res.quotes;
+    // this.news=res.news;
+    // this.quotes=res.quotes;
 
 
     console.log(res);

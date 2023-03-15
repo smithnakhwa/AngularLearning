@@ -96,6 +96,7 @@ import { ShoesComponent } from './fashion/shoes/shoes.component';
 import { FashionmoduleModule } from './fashion/fashionmodule.module';
 import { CustomerModule } from './customer/customer.module';
 import { AdminModule } from './admin/admin.module';
+import { TodoComponent } from './todo/todo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -144,6 +145,7 @@ import { AdminModule } from './admin/admin.module';
     DemouserdetailsComponent,
     UserdetailsComponent,
     FashiondetailsComponent,
+    TodoComponent,
    
   ],
   imports: [
