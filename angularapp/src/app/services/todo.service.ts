@@ -11,4 +11,13 @@ apiUrl='http://localhost:3000/todos';
   create(data){
     return this.httpClient.post(this.apiUrl,data);
   }
+  update(id,data){
+   return  this.httpClient.put(this.apiUrl+'/'+id,data);
+  }
+  fetch(){
+  return  this.httpClient.get(this.apiUrl);
+  }
+  delete(id){
+    return  this.httpClient.delete(this.apiUrl+'/'+id);
+  }
 }
