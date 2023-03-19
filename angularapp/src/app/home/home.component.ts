@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { FirebaseService } from '../services/firebase.service';
 import {map} from 'rxjs/operators'
 
@@ -7,14 +7,14 @@ import {map} from 'rxjs/operators'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
   constructor(private firebase:FirebaseService) { }
 fname;
-  ngOnInit() {
-
-    
-  }
+ ngOnInit(){
+  console.log('this is onit');
+  
+ }
   createData(){
     this.firebase.createPost().subscribe(res=>{
       console.log(res);

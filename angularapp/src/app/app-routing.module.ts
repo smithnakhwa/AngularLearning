@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AuthGuard } from './auth.guard';
 import { BooksComponent } from './books/books.component';
 import { Cote2Component } from './books/cote2/cote2.component';
 import { DoglapanComponent } from './books/doglapan/doglapan.component';
@@ -19,6 +20,7 @@ import { ShoesComponent } from './fashion/shoes/shoes.component';
 import { TShirtsComponent } from './fashion/t-shirts/t-shirts.component';
 import { FashiondetailsComponent } from './fashiondetails/fashiondetails.component';
 import { HomeComponent } from './home/home.component';
+import { LoginformComponent } from './loginform/loginform.component';
 import { OrderlistComponent } from './orders/orderlist/orderlist.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { CameraComponent } from './product/camera/camera.component';
@@ -37,7 +39,7 @@ const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'aboutus', component: AboutusComponent},
   {path:'contactus', component: ContactusComponent},
-  {path:'product', 
+  {path:'product', canActivate:[AuthGuard],
   children:[
     {path:'',component:ProductComponent},//http://localhost:4200/product-->''
     {path:'mobile',component:MoblieComponent},
@@ -64,7 +66,7 @@ children:[
 {path:'user',component:DemouserComponent},
 {path:'userdetails/:id',component:DemouserdetailsComponent},
 {path:'usersdetails',component:UserdetailsComponent},
-{path:'login',component:StudentformComponent},
+{path:'Student',component:StudentformComponent},
 {path:'order',component:OrderlistComponent},
 {path:'fashion',
 children:[
@@ -77,6 +79,7 @@ children:[
 },
 {path:'admin',loadChildren:'./admin/admin.module#AdminModule'},
 {path:'customer',loadChildren:'./customer/customer.module#CustomerModule'},
+{path:'login',component:LoginformComponent},
 
 
 {path:'fashiondetails/:id',component:FashiondetailsComponent},

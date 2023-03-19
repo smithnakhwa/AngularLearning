@@ -19,7 +19,6 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
 import { InputComponent } from './input/input.component';
 import { NgstylengclassComponent } from './ngstylengclass/ngstylengclass.component';
-import { CustomDirective } from './custom.directive';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //angular material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -53,14 +52,13 @@ import { RegformComponent } from './regform/regform.component';
 import { ReactiveregformComponent } from './reactiveregform/reactiveregform.component';
 import { PrototypereactiveformComponent } from './prototypereactiveform/prototypereactiveform.component';
 import { ScrollComponent } from './scroll/scroll.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PipeexampleComponent } from './pipeexample/pipeexample.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { SearchpipePipe } from './searchpipe.pipe';
 import { ProductFilterComponent } from './product-filter/product-filter.component';
 import { StockComponent } from './stock/stock.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { NO_ERRORS_SCHEMA } from '@angular/compiler/src/core';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
 import { Comp3Component } from './comp3/comp3.component';
@@ -70,11 +68,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { HomeComponent } from './home/home.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { ProductComponent } from './product/product.component';
-import { MoblieComponent } from './product/moblie/moblie.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { WatchComponent } from './product/watch/watch.component';
-import { CameraComponent } from './product/camera/camera.component';
+
 import { BooksComponent } from './books/books.component';
 import { ReminderofhimComponent } from './books/reminderofhim/reminderofhim.component';
 import { DoglapanComponent } from './books/doglapan/doglapan.component';
@@ -87,17 +81,14 @@ import { DemouserdetailsComponent } from './demouserdetails/demouserdetails.comp
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { ProductModule } from './product/product.module';
 import { OrdersModule } from './orders/orders.module';
-import { FashionComponent } from './fashion/fashion.component';
 import { FashiondetailsComponent } from './fashiondetails/fashiondetails.component';
-import { JeansComponent } from './fashion/jeans/jeans.component';
-import { TShirtsComponent } from './fashion/t-shirts/t-shirts.component';
-import { ShirtsComponent } from './fashion/shirts/shirts.component';
-import { ShoesComponent } from './fashion/shoes/shoes.component';
 import { FashionmoduleModule } from './fashion/fashionmodule.module';
-import { CustomerModule } from './customer/customer.module';
-import { AdminModule } from './admin/admin.module';
+
 import { TodoComponent } from './todo/todo.component';
 import { TodolistComponent } from './todo/todolist/todolist.component';
+import { LoginformComponent } from './loginform/loginform.component';
+import { AuthIntterceptorService } from './auth-interceptor.service';
+import { ProductComponent } from './product/product.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -148,6 +139,7 @@ import { TodolistComponent } from './todo/todolist/todolist.component';
     FashiondetailsComponent,
     TodoComponent,
     TodolistComponent,
+    LoginformComponent,
    
   ],
   imports: [
@@ -190,7 +182,13 @@ import { TodolistComponent } from './todo/todolist/todolist.component';
     
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide : HTTP_INTERCEPTORS,
+      useClass:AuthIntterceptorService,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
