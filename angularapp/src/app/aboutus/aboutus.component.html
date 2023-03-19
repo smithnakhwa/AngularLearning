@@ -1,1 +1,40 @@
-<p>aboutus works!</p>
+
+
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+          <input type="text" placeholder="Search" #search (blur)="getData(search.value)">
+     
+           <br>
+           <br>
+          <div class="table-responsive">
+            
+            <table class="table">
+              <thead class="thead-dark">
+                <tr >
+            
+    
+    
+                  <th scope="col">Title</th>
+                  <th scope="col">Wordcount</th>
+                  <th scope="col">Snippet</th>
+
+             
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let res of searchRes.query.search;">
+  
+    
+                  <th scope="col" class="title">{{res.title}}</th>
+                  <td scope="col" class="word">{{res.wordcount}}</td>
+                  <td scope="col" [innerHtml]="res.snippet" class="snip"></td>
+
+                </tr>
+          
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+
+
