@@ -1,0 +1,92 @@
+
+<br>
+<br>
+<div class="container">
+    <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/tomato.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title" >Del Monte Tomato Ketchup - Classic Blend, 950g</h5>
+          <p class="card-text" >Premium ingredients giving rich and superior taste.
+            Blended with ripe vine bright red tomatoes giving it a smooth and thick texture.
+            Contains no MSG.
+            No added colour.
+            Also available in flavours like Sweet and Spicy Tomato Ketchup (1kg) and No Onion No Garlic (1kg).
+            100% Vegetarian.
+          </p>
+          <button  class="btn btn-primary" (click)="OnFirstAdd(0,'Tomato Ketchup')" *ngIf="!altbtn[0];else btn">Add To Cart </button>
+          <ng-template #btn>
+           <button class="btn btn-primary"(click)="onClick()">Go To Cart</button>
+          </ng-template>
+          <!-- <ng-template #altbutton1>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary" value="Tomato" (click)="addCount(0,$event.target.value)" >+</button>
+              <button type="button" class="btn btn-primary">Add</button>
+              <button type="button" class="btn btn-primary" value="Tomato" (click)="subCount(0,$event.target.value)" >-</button>
+            </div>
+          </ng-template> -->
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/honey.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">DiSano Pure Honey 500 g (pack of 1)</h5>
+          <p class="card-text">Pure honey - no added sugar, no added c3/ C4 percent/rice/ corn/ cane sugar.
+            Disnao honey is loaded with natural anti-oxidants, enzymes and essential minerals.
+            Disano honey helps in manage weight -daily if consumed with warm water at morning will show visible results.</p>
+          <button  class="btn btn-primary"  (click)="OnFirstAdd(1,'Honey')" *ngIf="!altbtn[1];else btn1">Add To Cart </button>
+          <ng-template #btn1>
+            <button class="btn btn-primary"(click)="onClick()">Go To Cart</button>
+           </ng-template>
+          <!-- <ng-template #altbutton2>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary"  value="Honey" (click)="addCount(1,$event.target.value)" >+</button>
+              <button type="button" class="btn btn-primary">Add</button>
+              <button type="button" class="btn btn-primary"value="Honey" (click)="subCount(1,$event.target.value)" >-</button>
+            </div>
+          </ng-template> -->
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/butter.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Amul Butter Pasteurised, 500 g</h5>
+          <p class="card-text">Spread on Bread, Parantha, Roti, Nans, Sandwiches.
+            Topping : Pav Bhaji, Dals, Soups, Salads, Rice.
+            Cooking Medium : Butter Paneer Masala, Butter Corn Masala and thousands of delightful recipes.
+            Pure vegetarian</p>
+          <button  class="btn btn-primary" (click)="OnFirstAdd(2,'Butter')" *ngIf="!altbtn[2];else btn2">Add To Cart </button>
+          <ng-template #btn2>
+            <button class="btn btn-primary"(click)="onClick()">Go To Cart</button>
+           </ng-template>
+          <!-- <ng-template #altbutton3>
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary"  value="Butter" (click)="addCount(2,$event.target.value)">+</button>
+              <button type="button" class="btn btn-primary">Add</button>
+              <button type="button" class="btn btn-primary"value="Butter" (click)="subCount(2,$event.target.value)" >-</button>
+            </div>
+          </ng-template> -->
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="../../assets/images/peanut butter.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">MYFITNESS Chocolate Peanut Butter Smooth 1250g</h5>
+          <p class="card-text">Premium chocolate;Country of Origin: India.
+            High protein;Rich in taste.
+            Low carbs;Halal, Container Type : Tub; Original American recipe.
+            color map: Brown, color name: Brown, item form: Paste.
+            Material Features: Vegetarian</p>
+          <button class="btn btn-primary"  (click)="OnFirstAdd(3,'PeanutButter')" *ngIf="!altbtn[3];else btn3">Add To Cart </button>
+          <ng-template #btn3>
+            <button class="btn btn-primary"(click)="onClick()">Go To Cart</button>
+           </ng-template>
+          <!-- <ng-template #altbutton4>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary" value="PeanutButter" (click)="addCount(3,$event.target.value)" >+</button>
+              <button type="button" class="btn btn-primary">Add</button>
+              <button type="button" class="btn btn-primary" value="PeanutButter" (click)="subCount(3,$event.target.value)" >-</button>
+            </div>
+          </ng-template> -->
+        </div>
+      </div>
+</div>

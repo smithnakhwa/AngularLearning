@@ -1,0 +1,53 @@
+
+<div class="card">
+  
+    <div class="card-body">
+       <h2 *ngFor="let user of userName"> <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+      </svg>&nbsp;&nbsp;User:{{user.email}}</h2>
+      <button class="btn btn-link" (click)="delete()" >Log Out</button>
+      <div class="row justify-content-center">
+
+      <div class="table-responsive">
+        
+        <table class="table table-hover table-striped">
+          <thead class="thead-dark">
+            <tr >
+     
+
+
+              <th scope="col">ID</th>
+              <th scope="col">ProductName</th>
+              <th scope="col">count</th>
+              <th scope="col">Quatity</th>
+
+
+
+              
+
+         
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of productList">
+    
+
+              <td scope="col">{{product.id}}</td>
+              <td scope="col">{{product.productName}}</td>
+              <td scope="col">{{product.count}}</td>
+              <td scope="col">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                  <button type="button" class="btn btn-primary"  (click)="add(product.id,product)">+</button>
+                  <button type="button" class="btn btn-primary">{{product.count}}</button>
+                  <button type="button" class="btn btn-primary" (click)="sub(product.id,product)" >-</button>
+                </div>
+
+              </td>
+           
+      
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>

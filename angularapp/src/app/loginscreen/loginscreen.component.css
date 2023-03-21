@@ -1,0 +1,12 @@
+.row{
+   text-align: center;
+}
+mat-form-field{
+    width: 400px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button{
+    width:400px;
+    border-radius: 20px;
+}

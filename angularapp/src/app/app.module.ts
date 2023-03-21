@@ -87,8 +87,11 @@ import { FashionmoduleModule } from './fashion/fashionmodule.module';
 import { TodoComponent } from './todo/todo.component';
 import { TodolistComponent } from './todo/todolist/todolist.component';
 import { LoginformComponent } from './loginform/loginform.component';
-import { AuthIntterceptorService } from './auth-interceptor.service';
+// import { AuthIntterceptorService } from './auth-interceptor.service';
 import { ProductComponent } from './product/product.component';
+import { LoginscreenComponent } from './loginscreen/loginscreen.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -140,6 +143,9 @@ import { ProductComponent } from './product/product.component';
     TodoComponent,
     TodolistComponent,
     LoginformComponent,
+    LoginscreenComponent,
+    HomepageComponent,
+    CartComponent,
    
   ],
   imports: [
@@ -183,11 +189,11 @@ import { ProductComponent } from './product/product.component';
 
   ],
   providers: [
-    {
-      provide : HTTP_INTERCEPTORS,
-      useClass:AuthIntterceptorService,
-      multi:true
-    }
+    // {
+    //   provide : HTTP_INTERCEPTORS,
+    //   useClass:AuthIntterceptorService,
+    //   multi:true
+    // }
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
