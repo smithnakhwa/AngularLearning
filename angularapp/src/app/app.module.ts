@@ -92,6 +92,8 @@ import { ProductComponent } from './product/product.component';
 import { LoginscreenComponent } from './loginscreen/loginscreen.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CartComponent } from './cart/cart.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
+import { AuthGuard } from './auth.guard';
 @NgModule({
   declarations: [
     AppComponent,
@@ -146,6 +148,7 @@ import { CartComponent } from './cart/cart.component';
     LoginscreenComponent,
     HomepageComponent,
     CartComponent,
+    LifecyclehooksComponent,
    
   ],
   imports: [
@@ -194,6 +197,7 @@ import { CartComponent } from './cart/cart.component';
     //   useClass:AuthIntterceptorService,
     //   multi:true
     // }
+    AuthGuard
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]

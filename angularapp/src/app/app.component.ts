@@ -43,6 +43,10 @@ export class AppComponent implements OnInit{
   }
   // keys=[];
   // values=[];
+  pdata=0;
+ ChangeFromParent(){
+  this.pdata+=1;
+ }
   news=[];
   quotes=[];
 

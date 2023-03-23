@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthIntterceptorService } from '../auth-interceptor.service';
+// import { AuthIntterceptorService } from '../auth-interceptor.service';
 import { WipiService } from '../wipi.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class AboutusComponent implements OnInit {
   constructor(private wipi:WipiService) { }
 
   ngOnInit() {
-    console.log('hello');
+
     
 
   }

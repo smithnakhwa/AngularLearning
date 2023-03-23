@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Candeactivate } from '../interfaces/canDeactivate';
 import { AddlistService } from '../services/addlist.service';
 
 @Component({
@@ -8,11 +9,15 @@ import { AddlistService } from '../services/addlist.service';
   templateUrl: './loginscreen.component.html',
   styleUrls: ['./loginscreen.component.css']
 })
-export class LoginscreenComponent implements OnInit {
+export class LoginscreenComponent implements OnInit ,Candeactivate{
 
   constructor(private _fb:FormBuilder,private list:AddlistService,private routes:Router) { }
   myReactiveForm:FormGroup;
   formvalid;
+  Candeactivate(): boolean {
+    return window.confirm('This is interface method do you want to leave');
+}
+
 
   ngOnInit() {
     this.myReactiveForm=this._fb.group({

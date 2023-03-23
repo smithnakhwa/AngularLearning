@@ -9,6 +9,7 @@ export class WipiService {
 url='https://en.wikipedia.org/w/api.php';
   constructor(private http:HttpClient) { }
 search;
+
   getData(){
 
     return this.http.get(this.url,{params:{
@@ -21,4 +22,6 @@ search;
 
     }});
   }
+
+
 }

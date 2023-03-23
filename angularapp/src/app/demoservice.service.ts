@@ -5,12 +5,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DemoserviceService {
- apiUrl='https://jsonplaceholder.typicode.com/users';
+  product=[
+    {name:'Laptop',id:'101'},
+    {name:'Mobile',id:'102'}
+  ]
+ url:string;
   constructor(private httpClient: HttpClient) { }
   getUsers(){
-   return this.httpClient.get(this.apiUrl);
+   return this.httpClient.get(this.url);
   }
   getUserById(id:number){
-    return this.httpClient.get(this.apiUrl+'/'+id)
+    return this.httpClient.get(this.url+'/'+id)
   }
 }
