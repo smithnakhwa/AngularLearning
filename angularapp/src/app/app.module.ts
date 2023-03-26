@@ -94,6 +94,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { CartComponent } from './cart/cart.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { AuthGuard } from './auth.guard';
+import { RxjsComponent } from './rxjs/rxjs.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -149,6 +150,7 @@ import { AuthGuard } from './auth.guard';
     HomepageComponent,
     CartComponent,
     LifecyclehooksComponent,
+    RxjsComponent,
    
   ],
   imports: [

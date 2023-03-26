@@ -11,6 +11,7 @@ import { RapidapiService } from './rapidapi.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  appchildExist:boolean=true;
   title = 'angularapp';
   hero:string="Smith";
   empCount;
@@ -43,9 +44,9 @@ export class AppComponent implements OnInit{
   }
   // keys=[];
   // values=[];
-  pdata=0;
- ChangeFromParent(){
-  this.pdata+=1;
+  pdata="red";
+ ChangeFromParent(val){
+  this.pdata=val;
  }
   news=[];
   quotes=[];
@@ -118,6 +119,9 @@ export class AppComponent implements OnInit{
   }
   onParent(val){
     this.childToParent=val;
+  }
+  onDestroy(){
+    this.appchildExist=false;
   }
 
   objChildToParent(val:Employee){

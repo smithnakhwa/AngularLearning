@@ -9,7 +9,7 @@ export class DemoserviceService {
     {name:'Laptop',id:'101'},
     {name:'Mobile',id:'102'}
   ]
- url:string;
+ url:string='https://jsonplaceholder.typicode.com/users';
   constructor(private httpClient: HttpClient) { }
   getUsers(){
    return this.httpClient.get(this.url);
