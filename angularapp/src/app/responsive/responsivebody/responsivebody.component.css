@@ -1,0 +1,62 @@
+.con{
+    display: flex;
+    flex-direction: row;
+}
+.sidebar{
+    border: 2px  solid black;
+    border-top: 0px;
+    border-collapse:  collapse;
+    width: 25%;
+    height: 91%;
+    margin-left: 0px;
+    padding-bottom: 39.3%;
+}
+.sidebar.is-phone-portrait{
+    border: 1px  solid black;
+    border-top: 0px;
+    border-collapse:  collapse;
+    width: 77px;
+    height: 202px;
+    margin-left: 0px;
+    padding-bottom: 32%;
+}
+.child{
+    border: 2px  solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-collapse:  collapse;
+    width: 85%;
+    height: 761px;
+    margin-left: 0px;
+    padding-bottom: 20%;
+}
+.child.is-phone-portrait{
+    border: 1px  solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-collapse:  collapse;
+    width: 75%;
+    height: 202px;
+    margin-left: 0px;
+    padding-bottom: 20%;
+}
+/* below code is for tablet */
+.child.is-tablet-portrait{
+    border: 2px  solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-collapse:  collapse;
+    width: 80%;
+    height: 434px;
+    margin-left: 0px;
+    padding-bottom: 20%;
+}
+.sidebar.is-tablet-portrait{
+    border: 2px  solid black;
+    border-top: 0px;
+    border-collapse:  collapse;
+    width: 22%;
+    height: 95%;
+    margin-left: 0px;
+    padding-bottom: 31%;
+}

@@ -1,3 +1,5 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Breakpoints } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { forkJoin, from, interval, of, timer } from 'rxjs';
@@ -15,8 +17,9 @@ interface Post{
   styleUrls: ['./rxjs.component.css']
 })
 export class RxjsComponent implements OnInit {
-
-  constructor(private http:HttpClient) {
+width;
+height;
+  constructor(private http:HttpClient,private response:BreakpointObserver) {
     const users=http.get<User[]>(this.USER);
     const pots=http.get<Post[]>(this.POSTS);
     forkJoin([users,pots]).subscribe(res=>{
@@ -31,6 +34,13 @@ export class RxjsComponent implements OnInit {
   return of(data+' video upload');
  }
   ngOnInit() {
+     this.response.observe(Breakpoints.Handset).subscribe(res=>
+      {
+        if(res.matches){
+          console.log('this is mobile');
+          
+        }
+      })
     //mergeMap
         const obs1=from(['Tech','Comedy','News']);
         obs1.pipe(mergeMap(res=>this.getData(res))).subscribe(res=>{
@@ -84,6 +94,8 @@ export class RxjsComponent implements OnInit {
     custObs.pipe(takeUntil(condition)).subscribe(res=>
       {
         console.log('take until operater',res);
+       
+        
         
       })
     

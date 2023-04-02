@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-centre">
+    <div class="card" style="width: 120rem; height: 60rem">
+      <div class="card-body">
+        <app-responsiveheader></app-responsiveheader>
+
+        <div class="con">
+          <app-responsivesidebar
+            class="sidebar"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          ></app-responsivesidebar>
+          <div
+            class="child"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

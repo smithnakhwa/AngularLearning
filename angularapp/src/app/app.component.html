@@ -1,8 +1,6 @@
 <!-- The content below is only a placeholder and can be replaced.
 <div style="text-align:center"> -->
-  <h1 class="background">
-    Welcome to {{ title }}! {{name}}
-  </h1>
+
   <!-- {{currentTime()}}
   <h3>currentDate is{{currentDate()}}</h3>
   
@@ -137,7 +135,7 @@
 <app-comp4></app-comp4>
   </div>
 </div> -->
-<header>
+<!-- <header>
   <nav>
     <ul class="nav nav-tabs">
       <li class="nav-item"><a routerLinkActive="active" routerLink="/home" class="nav-link">Home</a></li>
@@ -165,8 +163,8 @@
 
     </ul>
   </nav>
-</header>
-<router-outlet></router-outlet>
+</header> -->
+<!-- <router-outlet></router-outlet> -->
 <!-- <br>
 <br>
 <div class="card">
@@ -268,11 +266,13 @@
   </div> -->
 <!-- <app-regform></app-regform>
 <app-studentform></app-studentform> -->
-<app-lifecyclehooks [parentData]="pdata" *ngIf="appchildExist">
+<!-- <app-lifecyclehooks [parentData]="pdata" *ngIf="appchildExist">
   <h2 #child >This is Smith Hook</h2>
   <h2 >This is My hooks</h2>
 </app-lifecyclehooks>
 
 <input type="text" placeholder="Enter Value" (blur)="ChangeFromParent($event.target.value)" >
-<button class="btn btn-danger" (click)="onDestroy()">OnDestroy</button>
+<button class="btn btn-danger" (click)="onDestroy()">OnDestroy</button> -->
+<a routerLinkActive="active" routerLink="/responsive" class="nav-link">responsive</a>
+<router-outlet></router-outlet>
 

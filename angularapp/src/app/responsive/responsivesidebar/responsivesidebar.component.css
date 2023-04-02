@@ -1,0 +1,91 @@
+svg{
+    width: 15%;
+    height: 15%;
+}
+.nav-item.is-phone-portrait{
+    font-size: 40%;
+    width: 190%;
+    height: 25%;
+    margin-left: 0;
+    padding: 0px;
+}
+.nav-item{
+    height: 50px;
+}
+a.nav-link{
+    padding: 0px;
+    
+}
+ul{
+    padding-left: 5%;
+    padding-top: 15%;
+}
+.container{
+    padding-left: 5px;
+}
+a.active svg{
+     color: orange;
+}
+a svg{
+    color: grey;
+}
+a{
+ color: black;
+}
+a.active{
+    font-weight: 600;
+    color: rgb(84, 83, 83);
+}
+span{
+  position: absolute;
+    left: 2.3%;
+    border: 2px solid black;
+    background-color: orange;
+    width: 10px;
+    height: 30px;
+   
+}
+.smith{
+    border: 1px solid red;
+}
+span.is-phone-portrait{
+    position: absolute;
+    left: 7.2%;
+    border: 1px solid black;
+    background-color: orange;
+    width: 5px;
+    height: 13px;
+}
+p.is-phone-portrait{
+    margin-bottom: 6px;
+}
+p{
+    margin-bottom: 25px;
+}
+/* below code is for tablet */
+.nav-item.is-tablet-portrait{
+    font-size: 65%;
+    width: 180%;
+    height: 25%;
+    margin-left: 0;
+    padding: 0px;
+}
+span.is-tablet-portrait{
+    position: absolute;
+    left:3.7%;
+    border: 2px solid black;
+    background-color: orange;
+    width: 10px;
+    height: 30px;
+}
+p.is-tablet-portrait{
+    margin-bottom: 10px;
+}
+svg.is-tablet-portrait{
+    height:25px;
+    width: 25px;
+}
+svg.is-phone-portrait{
+    height: 10px;
+    width: 10px;
+}

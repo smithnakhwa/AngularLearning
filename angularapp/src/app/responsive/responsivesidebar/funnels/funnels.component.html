@@ -1,0 +1,647 @@
+<div
+  class="container"
+  [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+>
+  <div
+    class="dropdowns"
+    [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+  >
+    <div
+      class="dropdown"
+      [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+    >
+      <select
+        name=""
+        id=""
+        class="btn btn-secondary"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      >
+        <option value="">[Dropdown]</option>
+        <option value=""></option>
+      </select>
+    </div>
+    <div
+      class="dropdown"
+      [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+    >
+      <select
+        name=""
+        id=""
+        class="btn btn-secondary"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      >
+        <option value="">[Dropdown]</option>
+        <option value=""></option>
+      </select>
+    </div>
+    <button
+      class="normalbtn"
+      [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+    >
+      (Button)
+    </button>
+  </div>
+  <div
+    class="display"
+    [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+  >
+    <p>
+      <span
+        class="dis"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+        >04
+        <caption
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          Visitor
+        </caption></span
+      >
+      <span
+        class="dis"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+        >525
+        <caption
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          Conversion
+        </caption></span
+      >
+      <span
+        class="dis"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      >
+        $25.6
+        <caption
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          Amount
+        </caption> </span
+      ><span
+        class="dis"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+        >$54
+        <caption
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          Sell
+        </caption> </span
+      ><span
+        class="dis"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+        >125
+        <caption
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          AOV
+        </caption>
+      </span>
+    </p>
+  </div>
+  <div
+    class="sidenav"
+    [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+  >
+    <p
+      class="sidenavp"
+      [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+    >
+      <span
+        class="steps"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      >
+        Funnel&nbsp;Step</span
+      >
+      <button
+        class="stepbtn"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      >
+        (Button)
+      </button>
+      <span
+        class="arrow-6"
+        (click)="getToPrev()"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      ></span>
+      <span
+        class="arrow-5"
+        (click)="goToNext()"
+        [ngClass]="{
+          'is-phone-portrait': mobile,
+          'is-tablet-portrait': tablet
+        }"
+      ></span>
+    </p>
+  </div>
+
+  <ngb-carousel
+    *ngIf="images"
+    [ngClass]="{ 'is-phone-portrait': mobile, 'is-tablet-portrait': tablet }"
+    [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="showNavigationIndicators"
+    [interval]="0"
+    [activeId]="'secondSlide'"
+    #ngcarousel
+  >
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <div
+          class="slide"
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          <div
+            class="slide1"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <h4
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              Heading1
+            </h4>
+            <p
+              id="side1"
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              <span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption>
+              </span>
+            </p>
+          </div>
+          <div
+            class="slide1"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <h4
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              Heading2
+            </h4>
+            <p
+              id="side1"
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              <span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <div
+          class="slide"
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          <div
+            class="slide1"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <h4
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              Heading3
+            </h4>
+            <p
+              id="side1"
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              <span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption>
+              </span>
+            </p>
+          </div>
+          <div
+            class="slide1"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <h4
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              Heading4
+            </h4>
+            <p
+              id="side1"
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              <span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <div
+          class="slide"
+          [ngClass]="{
+            'is-phone-portrait': mobile,
+            'is-tablet-portrait': tablet
+          }"
+        >
+          <div
+            class="slide1"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <h4
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              Heading5
+            </h4>
+            <p
+              id="side1"
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              <span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption>
+              </span>
+            </p>
+          </div>
+          <div
+            class="slide1"
+            [ngClass]="{
+              'is-phone-portrait': mobile,
+              'is-tablet-portrait': tablet
+            }"
+          >
+            <h4
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              Heading6
+            </h4>
+            <p
+              id="side1"
+              [ngClass]="{
+                'is-phone-portrait': mobile,
+                'is-tablet-portrait': tablet
+              }"
+            >
+              <span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption> </span
+              ><span
+                class="s1"
+                [ngClass]="{
+                  'is-phone-portrait': mobile,
+                  'is-tablet-portrait': tablet
+                }"
+                >32564
+                <caption
+                  [ngClass]="{
+                    'is-phone-portrait': mobile,
+                    'is-tablet-portrait': tablet
+                  }"
+                >
+                  Visitor
+                </caption>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

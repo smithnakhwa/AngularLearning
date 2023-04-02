@@ -43,7 +43,7 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},//http:localhost:4200-->''
-  {path:'home',component:HomepageComponent,canActivate:[LogincheckGuard]},
+  {path:'home',component:HomepageComponent},
   {path:'aboutus', component: AboutusComponent},
   {path:'contactus', component: ContactusComponent,canDeactivate:[CanDeactiveGuard]},
   {path:'product', canActivate:[AuthGuard],
@@ -88,6 +88,7 @@ children:[
 {path:'customer',loadChildren:'./customer/customer.module#CustomerModule'},
 {path:'login',component:LoginscreenComponent,canDeactivate:[CanDeactiveGuard]},
 {path:'cart',component:CartComponent},
+{path:'responsive',loadChildren:'./responsive/responsive.module#ResponsiveModule'},
 
 
 {path:'fashiondetails/:id',component:FashiondetailsComponent},

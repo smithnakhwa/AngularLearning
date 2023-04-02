@@ -95,6 +95,9 @@ import { CartComponent } from './cart/cart.component';
 import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 import { AuthGuard } from './auth.guard';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { HeaderComponent } from './header/header.component';
+import { HtmlPipe } from './html.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -151,6 +154,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     CartComponent,
     LifecyclehooksComponent,
     RxjsComponent,
+    HeaderComponent,
+  
    
   ],
   imports: [
@@ -189,7 +194,6 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     ProductModule,
     OrdersModule,
     FashionmoduleModule,
-
     
 
   ],
