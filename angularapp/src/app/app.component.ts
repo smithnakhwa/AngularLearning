@@ -4,6 +4,8 @@ import { Employee } from './models/employee';
 import { Stock } from './models/stock';
 import { MyServiceService } from './my-service.service';
 import { RapidapiService } from './rapidapi.service';
+import { GiphyService } from './giphy.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -39,7 +41,7 @@ export class AppComponent implements OnInit{
   // products=this.obj.products;
   imageUrl:'http://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg';
   // constructor(private obj:MyServiceService,private demoservice:DemoserviceService){
-    constructor(private finance:RapidapiService){
+    constructor(private finance:RapidapiService,private giphy:GiphyService){
     this.getValueFromServer();
   }
   // keys=[];
@@ -50,12 +52,14 @@ export class AppComponent implements OnInit{
  }
   news=[];
   quotes=[];
+  gifs=[];
 
   result=[];
   searchName:string='';
   public stock:Stock;
 
   ngOnInit(): void {
+
      this.stock=new Stock('Test stock company','TSC',85,90);
 
   //   this.demoservice.getUsers().subscribe(res=>{

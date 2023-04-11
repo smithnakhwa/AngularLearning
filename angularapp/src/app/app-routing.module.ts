@@ -39,6 +39,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { StudentformComponent } from './studentform/studentform.component';
 import { TodoComponent } from './todo/todo.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { GiphyComponent } from './giphy/giphy.component';
 
 
 const routes: Routes = [
@@ -89,7 +90,9 @@ children:[
 {path:'login',component:LoginscreenComponent,canDeactivate:[CanDeactiveGuard]},
 {path:'cart',component:CartComponent},
 {path:'responsive',loadChildren:'./responsive/responsive.module#ResponsiveModule'},
+{path:'giphy',component:GiphyComponent,
 
+},
 
 {path:'fashiondetails/:id',component:FashiondetailsComponent},
 {path:'todo',component:TodoComponent},

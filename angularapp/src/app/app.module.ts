@@ -97,6 +97,7 @@ import { AuthGuard } from './auth.guard';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { HeaderComponent } from './header/header.component';
 import { HtmlPipe } from './html.pipe';
+import { GiphyComponent } from './giphy/giphy.component';
 
 @NgModule({
   declarations: [
@@ -155,6 +156,7 @@ import { HtmlPipe } from './html.pipe';
     LifecyclehooksComponent,
     RxjsComponent,
     HeaderComponent,
+    GiphyComponent,
   
    
   ],

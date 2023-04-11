@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card w-95 ">
+
+            <div class="card-body">
+              <div class="header">
+                <img src="../../assets/images/GIPHY Logo 75px.png" alt="">
+              </div>
+              <div class="search">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="@username + tag to search within a verified channel" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="title" (keyup)="onSearch()">
+                    <span class="input-group-text" id="basic-addon2"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg></span>
+                 
+                </div>
+              </div>
+
+              <p *ngIf="title=='';else elseblock">Trending  GIFs</p>
+              <ng-template #elseblock> <p>{{title}}  GIFs</p></ng-template>
+              
+
+              <div class="gifscon">
+                <div class="spinner" *ngIf="loading">
+                  <div class="spinner-grow "  style="background-color: #4cd964;" role="status">
+                   
+                  </div>
+                  <div class="spinner-grow "  style="background-color:#5ac8fa ;" role="status">
+                  </div>
+                  <div class="spinner-grow "  style="background-color: #bb86fc;" role="status">
+                  </div>
+                  <div class="spinner-grow "  style="background-color:#ff2d55 ;" role="status">
+                  </div>
+                  <div class="spinner-grow "  style="background-color: #f1c40f;" role="status">
+                  </div>
+                </div>
+                <span  *ngFor="let gif of gifs"><img class="gifcon" [src]="gif.images.downsized.url" alt="" style="width: 248px;"></span>
+              </div>
+              <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  
+                  <li class="page-item"><button class="page-link" (click)="onPre()">Previous</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(0)">1</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(10)">2</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(20)">3</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(30)">4</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(40)">5</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(50)">6</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(60)">7</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(70)">8</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(80)">9</button></li>
+                  <li class="page-item"><button class="page-link" (click)="onClick(90)">10</button></li>
+
+                  <li class="page-item"><button class="page-link"(click)="onNext()">Next</button></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+    </div>
+</div>
