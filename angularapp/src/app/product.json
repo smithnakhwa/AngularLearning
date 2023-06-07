@@ -1,20 +1,5 @@
 {
-  "userDetials": [],
-  "product": [
-    {
-      "id": 2,
-      "productName": "Honey",
-      "count": 3
-    },
-    {
-      "id": 3,
-      "productName": "Tomato Ketchup",
-      "count": 2
-    },
-    {
-      "productName": "PeanutButter",
-      "count": 1,
-      "id": 4
-    }
+  "users":[
+    
   ]
 }

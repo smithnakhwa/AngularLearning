@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mocksever": {
+      "hosting": {
+        "angularapp": [
+          "mocksever"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular2023"
+  }
+}

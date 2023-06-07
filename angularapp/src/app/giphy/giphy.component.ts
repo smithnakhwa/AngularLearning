@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GiphyService } from '../giphy.service';
-import { debounceTime, map, share } from 'rxjs/operators';
+import { debounceTime, distinctUntilChanged, map, share, switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-giphy',
@@ -11,6 +11,7 @@ export class GiphyComponent implements OnInit {
 gifs=[];
 title='';
 result='trending?';
+count=0;
 off=0;
 loading=true;
   constructor(private giphy:GiphyService) { }
@@ -60,19 +61,8 @@ loadin(){
       this.off=90;
       this.loading=true;
 
-      
-    this.giphy.getData(this.result,this.title).pipe(map(x=>{ return x.data}),share()).subscribe(res=>{
-      if(res){
-        this.loadin();
-      }
-      console.log(res);
-      this.gifs=res;
-      console.log(this.gifs);
-      
-      
-
-      
-    }) 
+     
+  
 
      }
      else{
@@ -80,19 +70,8 @@ loadin(){
         this.giphy.offv=pre.toString();
         this.loading=true;
         this.off=pre;
-
-        this.giphy.getData(this.result,this.title).pipe(map(x=>{ return x.data}),share()).subscribe(res=>{
-          if(res){
-            this.loadin();
-          }
-          console.log(res);
-          this.gifs=res;
-          console.log(this.gifs);
-          
-          
-    
-          
-        }) 
+      
+      
      }
     }
     onNext(){
@@ -141,13 +120,15 @@ loadin(){
         this.loading=true;
 
      
-        this.giphy.getData(this.result,this.title).pipe(debounceTime(1000),map(x=>{ return x.data}),share()).subscribe(res=>{
+        this.giphy.getData(this.result,this.title).pipe(debounceTime(1000),map(x=>{ return x.data})).subscribe(res=>{
+   
+          
           if(res){
             this.loadin();
           }
-          console.log(res);
+       
           this.gifs=res;
-          console.log(this.gifs);
+            
           
           
     
@@ -158,15 +139,12 @@ loadin(){
         this.gifs=[];
         this.result='search?';
         this.loading=true;
-        this.giphy.getData(this.result,this.title).pipe(debounceTime(1500),map(x=>{ return x.data}),share()).subscribe(res=>{
-          if(res){
-            this.loadin();
-          }
-          console.log(res);
-          this.gifs=res;
-          console.log(this.gifs);
-      })
-    }
+        this.giphy.searchterm.next(this.result);
+        this.giphy.searchterm.pipe(debounceTime(1000), distinctUntilChanged(),switchMap((value)=>
+ this.giphy.getData(value,this.title)  )).subscribe(res=>{console.log(res);
+ })
+          
+        }
   }
 
 }

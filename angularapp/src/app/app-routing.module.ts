@@ -40,10 +40,19 @@ import { StudentformComponent } from './studentform/studentform.component';
 import { TodoComponent } from './todo/todo.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { GiphyComponent } from './giphy/giphy.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { RegisterComponent } from './register/register.component';
+import { YGuard } from './y.guard';
+import { SliderComponent } from './slider/slider.component';
 
 
 const routes: Routes = [
   {path:'',redirectTo:'home',pathMatch:'full'},//http:localhost:4200-->''
+  {path:'home',component:LoginComponent},
+  {path:'slider',component:SliderComponent},
+  {path:'resigter',component:RegisterComponent},
+  {path:'dash',component:DashboardComponent,canActivate:[YGuard]},
   {path:'home',component:HomepageComponent},
   {path:'aboutus', component: AboutusComponent},
   {path:'contactus', component: ContactusComponent,canDeactivate:[CanDeactiveGuard]},

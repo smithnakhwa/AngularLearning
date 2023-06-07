@@ -1,0 +1,73 @@
+<button type="button" class="btn btn-info" routerLink="/login">Back to Home</button>
+
+
+<!-- inline editing -->
+<div class="row">
+  <div class="col-12">
+    <table class="table  table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>User Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>password</th>
+          <th>Gender</th>
+          <th style="width: 15%;" class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userArray;let i= index">
+          <td>{{i+1}}</td>
+          <td>{{user.user_id}}</td>
+          <td>{{user.user_name}}</td>
+          <td>
+            <div *ngIf="user.isEdit">
+              <input type="text" [(ngModel)]="user.user_email" class="form-control" />
+            </div>
+            <div *ngIf="!user.isEdit">
+              {{user.user_email}}
+            </div>
+          </td>
+
+          <td>
+            <div *ngIf="user.isEdit">
+              <input type="text" [(ngModel)]="user.user_phone_no" class="form-control" />
+            </div>
+            <div *ngIf="!user.isEdit">
+              {{user.user_phone_no}}
+            </div>
+          </td>
+          <td>
+            <div *ngIf="user.isEdit">
+              <input type="text" [(ngModel)]="user.user_pwd" class="form-control" />
+            </div>
+            <div *ngIf="!user.isEdit">
+              {{user.user_pwd}}
+            </div>
+          </td>
+          <td>
+            <div *ngIf="user.isEdit">
+              <input type="text" [(ngModel)]="user.user_gender" class="form-control" />
+            </div>
+            <div *ngIf="!user.isEdit">
+              {{user.user_gender}}
+            </div>
+          </td>
+
+          <td style="width: 20%;" class="text-center">
+            <div *ngIf="user.isEdit">
+              <button class="btn btn-sm btn-success" (click)="updateData(user)">Update</button>
+              <button class="btn btn-sm btn-info" (click)="user.isEdit = false">Cancel</button>
+            </div>
+            <div *ngIf="!user.isEdit">
+              <button class="btn btn-sm btn-success md-2" (click)="onEdit(user)">Edit</button>
+              <button class="btn btn-sm btn-danger md-2" (click)="deleteData(user.user_id)">Delete</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

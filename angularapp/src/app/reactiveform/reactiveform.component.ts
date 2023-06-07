@@ -30,15 +30,19 @@ export class ReactiveformComponent implements OnInit {
   this.myReactiveForm=this._fb.group({
     userDeatils:this._fb.group({
       username:[null,[Validators.required,this.naNames.bind(this)]],
-      email:[null,[Validators.required],this.naEmail]
+      email:[null,[Validators.required],this.naEmail.bind(this)]
 
     }),
     course:['JavaScript'],
-    skills:this._fb.array([['',[Validators.required]]])
+    skills:this._fb.array([['',[Validators.required]]]),
+    address:this._fb.array([['',[Validators.required]]]),
 
 
 
   })
+ }
+ get address():any{
+  return this.myReactiveForm.get('address');
  }
   ngOnInit() {
     // setTimeout(()=>{
@@ -74,6 +78,7 @@ export class ReactiveformComponent implements OnInit {
   }
  onSkills(){
   (<FormArray> this.myReactiveForm.get('skills')).push(this._fb.control(null,Validators.required));
+  this.address.push(this._fb.control(null,));
  }
  naNames(control:FormControl){
   if(this.notAllowedNames.indexOf(control.value) !== -1)

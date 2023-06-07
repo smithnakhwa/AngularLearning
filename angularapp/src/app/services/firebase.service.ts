@@ -5,16 +5,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class FirebaseService {
-url='https://angular2023-a0b29-default-rtdb.firebaseio.com/';
+url='gs://angular2023-a0b29.appspot.com';
   constructor(private http:HttpClient) { }
 
-  createPost(){
-    let postData={
-      title:'This is Firebase example',
-      content:'We are calling angular post method'
-  }
-
-return this.http.post(this.url+'posts.json',postData);
+  createPost(data){
+    const fd=new FormData();
+    fd.append('image',data,data.name)
+return this.http.post(this.url,fd);
   }
   getPost(){
     return this.http.get(this.url+'posts.json');

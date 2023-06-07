@@ -16,7 +16,7 @@ export class PasswordComponent implements OnInit {
   constructor() { }
   stringLength(val){
   this.length=val.target.value;
-  console.log(this.length,val.target.value);
+  // eslint-disable-next-line angular/log
   
   }
   onLetter(){

@@ -1,20 +1,30 @@
-.background{
-    background-color: aqua;
+.container{
+    display: inline-block;
+
+    width:1342px !important;
+    margin: 0;
+    margin-top:60px;
+  
 }
-table,th,td{
-   border: 1px solid black;
+body{
+    background: url(https://resources.beecrowd.com.br/academic/img/geometry.png) top left #fff;
 }
-.thead-dark{
-    background-color: #343a40;
-    color: white;
-}
-th,td{
-   padding: 30px;
-}
-input{
-    margin-bottom: 10px;
-}
-.card{
-    margin-left: 20px;
+.head{
+    display: inline-block;
+    height: 50px !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999 !important;
+    background-color: white !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+#main{
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 #dbdbdb;
+    height: auto  !important;
+    margin: 25px auto 55px;
+    width: 980px !important;
+}

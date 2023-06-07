@@ -1,0 +1,47 @@
+{
+    "login":"login",
+    "register":"register",
+    "forum":"forum",
+    "professors":"professors",
+    "corporations":"corporations",
+    "leftContentFirst":"We are a global community of developers committed to keep evolving as students and professionals. Train algorithms and programming challenges and become the expert you always dreamed to be.",
+    "cORPORATEPAGE":"CORPORATE PAGE",
+    "leftTitleSecond":"PROBLEM REPOSITORY",
+    "leftContentSecond":"Our state-of-the-art competitive programming platform has 2,000+ analytical and programming tests available in more than 20 different programming languages. All tests are available in Portuguese and English.",
+    "leftTitleThird":"FORUM",
+    "leftContentThird":"The beecrowd Forum is the right place for camaraderie, support and expert help. Share your knowledge and experience about algorithms and programming languages with users around the world!",
+    "centerTitleFirst":"USE SOCIAL SIGN IN",
+    "or":"OR",
+    "email":"email",
+    "password":"password",
+    "remeber":"REMEMBER ME (7 DAYS)",
+    "signIn":"Sign In",
+    "firstTime":"FIRST TIME HERE?",
+    "signUP": "SIGN UP ",
+    "centerContent":"today to join one of the largest developer and competitive programming communities in the world!",
+    "reset":"reset password",
+    "activate":"activate",
+    "follow":"follow us:",
+    "rightTitleFirst":"COMPETITION AND RANKING",
+    "rightContentFirst":"Join the brightest minds in competitive programming! Participate in competitions, contests and tournaments! Compare your knowledge with your peers. Level up, grow and shine in your career!",
+    "rightTitleSecond":"ACADEMIC",
+    "rightContentSecond":"The beecrowd Academic is a module for Educational Institutions, Professors and Coaches. Here you can create courses, exercise lists and track your students progress giving them real-time feedback.",
+    "accessAcademic":"Access Academic",
+    "rightTitleThird":"CONTESTS",
+    "rightContentThird":"Here you will also find public contests on a regular basis. Contact us to host your contests in our platform. Create new problems and train your team with unique and private competitions.",
+    "privacy":"privacy",
+    "termsconditions":"terms&conditions",
+    "FAQ":"FAQs",
+    "status":"status",
+    "contact":"Contact"
+
+
+
+
+
+
+
+
+
+
+}

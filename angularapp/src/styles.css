@@ -1,6 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background-color: rgb(177, 177, 220);
+    background: url(https://resources.beecrowd.com.br/academic/img/geometry.png) top left #fff;
 }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow: auto;
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: transparent transparent; 
+}
+body::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: transparent; /* Color of the scrollbar track */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Color of the scrollbar thumb */
+  }
+ 

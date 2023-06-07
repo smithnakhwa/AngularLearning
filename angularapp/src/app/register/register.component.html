@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <h1>Registeration Form</h1>
+      <form [formGroup]="myregisterationForm"  (ngSubmit)="onSubmit()">
+          <div class="example-container">
+              <mat-form-field class="email">
+                <mat-label>Enter Your Name</mat-label>
+                <input matInput type="text"  formControlName="name" required oninput=" this.value = this.value.replace(/[0-9]/g,'')" >
+                <mat-error *ngIf="name.errors?.required"> Name is required</mat-error>
+  
+  
+              </mat-form-field>
+            </div>
+            <div class="example-container">
+                <mat-form-field class="email">
+                  <mat-label>Enter Your Mobile Number</mat-label>
+                  <input matInput type="number" formControlName="mobile" required  onKeyPress="if(this.value.length==10) return false;"  >
+                  <mat-error *ngIf="mobile.errors?.required"> Mobile Number is required</mat-error>
+                  <mat-error *ngIf="mobile.errors?.minlength">Please Enter 10 Digits Number</mat-error>
+    
+    
+                </mat-form-field>
+              </div>
+            <div class="example-container">
+                <mat-form-field class="email">
+                  <mat-label>Enter your email</mat-label>
+                  <input matInput placeholder="pat@example.com" formControlName="email" required>
+                  <mat-error *ngIf="email.errors?.required"> Email is required</mat-error>
+    
+    
+                </mat-form-field>
+              </div>
+            <div class="example-container">
+              <mat-form-field class="pass">
+                <mat-label>Enter your password</mat-label>
+                <input matInput type="password" required formControlName="password" maxlength="8">
+           
+                <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+                <mat-error *ngIf="password.errors?.minlength">8 Chaarcter required</mat-error>
+  
+              </mat-form-field>
+              </div>
+               <div class="button">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button (click)="onClick()" class="btn btn-primary" id="login">Login</button>
+
+
+               </div>
+  
+      </form>
+      
+    </div>
+  </div>

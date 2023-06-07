@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule} from '@angular/core';
 import{CommonModule} from '@angular/common'
+import { FetchService } from './fetch.service';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -52,7 +56,7 @@ import { RegformComponent } from './regform/regform.component';
 import { ReactiveregformComponent } from './reactiveregform/reactiveregform.component';
 import { PrototypereactiveformComponent } from './prototypereactiveform/prototypereactiveform.component';
 import { ScrollComponent } from './scroll/scroll.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PipeexampleComponent } from './pipeexample/pipeexample.component';
 import { CustompipePipe } from './custompipe.pipe';
 import { SearchpipePipe } from './searchpipe.pipe';
@@ -88,7 +92,6 @@ import { TodoComponent } from './todo/todo.component';
 import { TodolistComponent } from './todo/todolist/todolist.component';
 import { LoginformComponent } from './loginform/loginform.component';
 // import { AuthIntterceptorService } from './auth-interceptor.service';
-import { ProductComponent } from './product/product.component';
 import { LoginscreenComponent } from './loginscreen/loginscreen.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { CartComponent } from './cart/cart.component';
@@ -96,8 +99,34 @@ import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.compone
 import { AuthGuard } from './auth.guard';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { HeaderComponent } from './header/header.component';
-import { HtmlPipe } from './html.pipe';
 import { GiphyComponent } from './giphy/giphy.component';
+import { XlsxdataComponent } from './xlsxdata/xlsxdata.component';
+import {AngularFireModule} from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import {AngularFireStorageModule } from "@angular/fire/storage"
+import { FirebaseauthService } from './firebaseauth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { NgxSmartModalModule, NgxSmartModalService } from 'ngx-smart-modal';
+import { ModaloneComponent } from './modalone/modalone.component';
+import { ModaltwoComponent } from './modaltwo/modaltwo.component';
+import { CarouselComponent } from './carousel/carousel.component';
+// import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { SliderComponent } from './slider/slider.component';
+import { HeadComponent } from './head/head.component';
+import { MainComponent } from './main/main.component';
+import { FooterComponent } from './footer/footer.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {  HttpClient } from '@angular/common/http';
+ 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+ }
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -157,6 +186,17 @@ import { GiphyComponent } from './giphy/giphy.component';
     RxjsComponent,
     HeaderComponent,
     GiphyComponent,
+    XlsxdataComponent,
+    DashboardComponent,
+    LoginComponent,
+    RegisterComponent,
+    ModaloneComponent,
+    ModaltwoComponent,
+    CarouselComponent,
+    SliderComponent,
+    HeadComponent,
+    MainComponent,
+    FooterComponent,
   
    
   ],
@@ -196,7 +236,20 @@ import { GiphyComponent } from './giphy/giphy.component';
     ProductModule,
     OrdersModule,
     FashionmoduleModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    NgxSmartModalModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+  //  CarouselModule.forRoot()
     
+
 
   ],
   providers: [
@@ -205,14 +258,19 @@ import { GiphyComponent } from './giphy/giphy.component';
     //   useClass:AuthIntterceptorService,
     //   multi:true
     // }
-    AuthGuard
+    NgxSmartModalService,
+    AuthGuard,
+    FetchService,
+    FirebaseauthService,
+    FirebaseauthService,
+    AngularFireAuth
   ],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   constructor(){
-    console.log('App Calling');
     
    }
  }
+ 

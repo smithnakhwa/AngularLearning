@@ -1,0 +1,69 @@
+.footer-content{
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+.ribbon {
+    background: #fff;
+    box-shadow: 0 0 10px 0 #dbdbdb;
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 29px !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    -webkit-transform: translateZ(0);
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.footer-content {
+    font-size: 11px;
+    margin: 0 auto;
+    width: calc(100% - 50px);
+    min-width: 1000px;
+    margin-right: 20px;
+}
+footer .site-coyright {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px 10px 8px 20px;
+    width: 20%;
+}
+footer .site-information {
+    box-sizing: border-box;
+    float: left;
+    padding: 10px 227px 8px;
+    width: 70%;
+    margin-right: 40px;
+}
+
+ol, ul {
+    list-style: none;
+}
+footer .site-information li {
+    display: inline-block;
+    padding: 0 3px;
+}
+footer .site-version {
+    box-sizing: border-box;
+    float: right;
+    padding: 10px 20px 8px 10px;
+    text-align: end;
+    width: 20%;
+}
+a{
+    text-decoration: none;
+    color: black;
+
+}

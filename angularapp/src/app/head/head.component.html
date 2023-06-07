@@ -1,0 +1,35 @@
+<div class="container" >
+<div class="img-container">
+    <div id="flg"  class="h-flag h-flag-en animated rubberBand">
+        <ul class="h-language-menu">
+            <div class="box"></div>
+        <li>
+        <a  (click)="changeEN()">English</a> </li>
+        <li>
+        <a  (click)="changePR()">Português</a> </li>
+        <li>
+        <a  (click)="changeES()">Español</a> </li>
+        </ul>
+        <div class="h-language">
+            {{flagName}} </div>
+    </div>
+</div>
+<div class="compoent-container">
+    <ul id="menu">
+        <li>
+        <a href="/judge/en/login">{{ 'login' | translate }}</a> </li>
+        <li> 
+        <a href="/judge/en/register">{{ 'register' | translate }}</a> </li>
+        <li>
+        <a href="/judge/en/forum">{{ 'forum' | translate }}</a> </li>
+        <li class="for-professors">
+        <a href="https://www.beecrowd.com.br/academic" target="_blank">{{ 'professors' | translate }}</a> </li>
+        <li class="for-companies">
+        <a href="https://www.beecrowd.com.br/recruiter" target="_blank">{{ 'corporations' | translate }}</a> </li>
+        </ul>
+</div>
+<div class="logo-conatiner">
+    <h1 class="uri-text-logo">bee<span class="h-option">crowd</span></h1>
+</div>
+</div>
+

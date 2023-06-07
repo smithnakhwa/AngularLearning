@@ -41,6 +41,15 @@
                     <button class="btn btn-light btn-small mt-4" (click)="onSkills()"><i>+</i>Add Skills</button>
          
                 </div>
+                <div class="form-group" formArrayName="address">
+                    <label>Address</label>
+                    <ng-container *ngFor="let skill of address.controls;index as i">
+                        <input type="text" class="form-control" placeholder="Add address" formControlName="{{i}}">
+
+                    </ng-container>
+                    <button class="btn btn-light btn-small mt-4" (click)="onSkills()"><i>+</i>Add Skills</button>
+         
+                </div>
 
          
                 <button type="submit" class="btn btn-primary mt-2">Submit</button>

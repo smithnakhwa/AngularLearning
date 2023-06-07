@@ -1,0 +1,405 @@
+.login-left, .login-right {
+    float: left;
+    margin: 45px 25px 0;
+    width: 300px;
+}
+.login-left div, .login-right div {
+    height: 265px;
+}
+#li-about {
+    background-position: 0 0;
+}
+.login-left div, .login-right div {
+    height: 265px;
+}
+.l-icon {
+    background-image: url(https://resources.beecrowd.com.br/judge/img/5.0/login-image-set.png);
+    background-repeat: no-repeat;
+}
+.l-space {
+    margin: 0 0 50px;
+}
+
+.login-left h1, .login-right h1 {
+    border-bottom: #c2c2c2 dotted 1px;
+    color: #b0b0b0;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 0 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.login-left p {
+    margin: 40px 0 100px 150px;
+}
+.login-left p, .login-right p {
+    color: #454545;
+    font-size: 12px;
+    line-height: 18px;
+}
+#li-repository {
+    background-position: 0 -539px;
+}
+#li-forum {
+    background-position: 0 -1080px;
+}
+.login-center {
+    float: left;
+    margin: 25px 0 0;
+    width: 270px;
+}
+
+
+.login-center .logo {
+    padding: 35px 0 0;
+    text-align: center;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    
+}
+#users-form {
+    margin: 20px 0;
+}
+#sponsors span, #media span, #users-form span {
+    color: #793197;
+    display: block;
+    font-family: BryantMedium;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.use-social-login {
+    color: #793197;
+    display: block;
+    font-family: BryantMedium;
+    font-size: 12px!important;
+    letter-spacing: 2px;
+    margin: 40px 0 20px!important;
+    text-align: center;
+    text-transform: uppercase;
+}
+label {
+    color: #454545;
+    display: block;
+    font-size: 10px !important;
+    margin: 0 0 5px;
+    text-indent: 5px;
+    text-transform: uppercase;
+}
+
+input[type=email], input[type=password], input[type=number], input[type=text], input[type=url], select, textarea {
+    color: #333;
+    background: #fff;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.075);
+    box-sizing: border-box;
+    margin: 0 0 15px;
+    height: 34px;
+    padding: 7px 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+input, select, textarea {
+    outline: 0;
+}
+user agent stylesheet
+input[type="email" i] {
+    padding: 1px 2px;
+}
+user agent stylesheet
+input {
+    writing-mode: horizontal-tb !important;
+
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    background-color: field;
+    margin: 0em;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+.remember-me {
+    float: left;
+    width: 150px;
+}
+input[type="hidden" i] {
+    appearance: none;
+    background-color: initial;
+    cursor: default;
+    display: none !important;
+    padding: initial;
+    border: initial;
+}
+
+element.style {
+}
+input[type=checkbox] {
+    float: left;
+}
+input, select, textarea {
+    outline: 0;
+}
+input[type="checkbox" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 0px 3px 3px 4px;
+    padding: initial;
+    border: initial;
+}
+input[type=submit] {
+    color: #fff;
+    font-family: BryantMedium;
+    height: 33px;
+    transition: .7s;
+    width: 100%;
+}
+#users-form .submit {
+    float: right;
+    margin: 0 0 0;
+    width: 30%;
+}
+.submit {
+    float: right;
+    width: 22%;
+}
+
+input[type=submit], .send-link, .send-link-large {
+    border-radius: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0;
+    padding: 0px 0px;
+    text-transform: uppercase;
+}
+.send-purple {
+    background: #a957be;
+    border: 1px solid #793197;
+    border-bottom: #793197 solid 3px;
+}
+.send-right {
+    float: right;
+}
+input, select, textarea {
+    outline: 0;
+}
+user agent stylesheet
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: buttonface;
+    color: buttontext;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+}
+#register {
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+    margin: 0 0 20px;
+    padding: 15px;
+    text-align: left;
+}
+#register h1 a {
+    color: #662483;
+    font-family: BryantMedium;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin: 0 0 5px;
+    text-align: left;
+}
+
+.login-center a {
+    display: block;
+}
+a {
+    color: #454545;
+    outline: 0;
+    text-decoration: none;
+}
+
+#register strong, #social-register strong {
+    font-weight: 700;
+}
+#register p {
+    color: #454545;
+    font-size: 12px;
+    line-height: 18px;
+}
+#manage-account {
+    margin: 0 0 20px;
+}
+.login-center a {
+    display: block;
+}
+
+.send-white {
+    background: #fff;
+    border: 1px solid #bbb;
+    color: #454545;
+}
+.send-left {
+    float: left;
+}
+.send-link-large {
+    width: 46%;
+}
+.send-link, .send-link-large {
+    background: #f3f3f3;
+    border: #bbb solid 1px;
+    color: #454545;
+    font-size: 10px;
+    text-align: center;
+    transition: .3s;
+}
+
+.social-media-links-login {
+    margin-bottom: 15px;
+}
+.social-media-links-text {
+    color: #793197;
+    display: block;
+    font-family: BryantMedium;
+    font-size: 18px !important;
+    letter-spacing: 2px;
+    margin: 40px 0 20px !important;
+    text-align: center;
+    text-transform: uppercase;
+}
+#li-rank {
+    background-position: 152px -272px;
+}
+.login-left div, .login-right div {
+    height: 265px;
+}
+.l-icon {
+    background-image: url(https://resources.beecrowd.com.br/judge/img/5.0/login-image-set.png);
+    background-repeat: no-repeat;
+}
+.l-space {
+    margin: 0 0 50px;
+}
+#li-academic {
+    background-position: 152px -805px;
+}
+
+.login-left div, .login-right div {
+    height: 265px;
+}
+.l-icon {
+    background-image: url(https://resources.beecrowd.com.br/judge/img/5.0/login-image-set.png);
+    background-repeat: no-repeat;
+}
+.l-space {
+    margin: 0 0 50px;
+}
+#li-contests {
+    background-position: 152px -1350px;
+}
+
+.login-left div, .login-right div {
+    height: 265px;
+}
+.l-icon {
+    background-image: url(https://resources.beecrowd.com.br/judge/img/5.0/login-image-set.png);
+    background-repeat: no-repeat;
+}
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+
+.login-right p {
+    margin: 40px 150px 100px 0;
+    text-align: right;
+}
+.login-left p, .login-right p {
+    color: #454545;
+    font-size: 12px;
+    line-height: 18px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.login-center{
+    display: flex;
+    flex-direction: column;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+
+    padding-left: 5px;
+    padding-right: 20px !important;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+.or-span{
+    padding-top: 20px;
+}
+
+
+.send-white {
+    background: #fff;
+    border: 1px solid #bbb;
+    color: #454545;
+}
+.send-left {
+    float: left;
+}
+.send-link-large {
+    width: 46%;
+}
+.send-link, .send-link-large {
+    background: #f3f3f3;
+    border: #bbb solid 1px;
+    color: #454545;
+    font-size: 10px;
+    text-align: center;
+    transition: .3s;
+}

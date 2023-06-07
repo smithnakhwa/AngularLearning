@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/angularapp",
-            "index": "src/index.html",
+            "index": "src/index.html", 
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
@@ -119,9 +119,16 @@
               "devServerTarget": "angularapp:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "angularapp"
+  "defaultProject": "angularapp",
+  "cli": {
+    "analytics": false
+  }
 }

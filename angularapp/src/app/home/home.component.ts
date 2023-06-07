@@ -15,14 +15,7 @@ fname;
   console.log('this is onit');
   
  }
-  createData(){
-    this.firebase.createPost().subscribe(res=>{
-      console.log(res);
-      
-    
-      
-    })
-  }
+
   getData(){
     this.firebase.getPost().pipe(map(x=>{
       // empty array

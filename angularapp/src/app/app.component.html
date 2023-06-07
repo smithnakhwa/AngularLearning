@@ -273,7 +273,36 @@
 
 <input type="text" placeholder="Enter Value" (blur)="ChangeFromParent($event.target.value)" >
 <button class="btn btn-danger" (click)="onDestroy()">OnDestroy</button> -->
-<!-- <a routerLinkActive="active" routerLink="/responsive" class="nav-link">responsive</a> -->  <li class="nav-item"><a routerLinkActive="active" routerLink="/giphy" class="nav-link">giphy</a></li>
+<!-- <a routerLinkActive="active" routerLink="/responsive" class="nav-link">responsive</a> -->  
 
-<router-outlet></router-outlet>
+<!-- <app-regform></app-regform>
 
+
+<router-outlet></router-outlet> -->
+<app-head  class="head"></app-head>
+
+<div class="container" style="max-width: 1241.5px;">
+<div class="row justify-content-center"> 
+  <div class="webiste">
+    <div class="card w-100" id="main">
+      <div class="card-body">
+        <app-main></app-main>
+      </div>
+    </div>
+ 
+  <app-footer class="footer" style="max-width: 1241.5px  !important;background-color: white;"></app-footer> 
+</div>
+</div>
+   
+
+</div>
+
+
+<!-- 1.<button (click)="    this.modal.getModal('modalone').open()
+">Open Modal one</button>
+2. <button (click)="    this.modal.getModal('modaltwo').open()
+">Open modal 2</button>
+
+
+<app-modaltwo></app-modaltwo>
+<app-modalone></app-modalone> -->

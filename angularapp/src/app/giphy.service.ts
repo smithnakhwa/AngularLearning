@@ -1,12 +1,13 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GiphyService {
 url='https://api.giphy.com/v1/gifs/';
+searchterm:Subject<any>=new Subject<any>();
 offv='0';
   constructor(private http:HttpClient) { }
   getData(thing,qr):Observable<any>{

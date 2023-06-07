@@ -1,0 +1,18 @@
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .carousel-item img {
+    height: 300px; /* Adjust the height as per your requirement */
+  }
+  
+
+  img:hover {
+    transform: scale(0.8);
+    
+  }
+  .carousel-item img{
+
+    object-fit: contain;
+  }

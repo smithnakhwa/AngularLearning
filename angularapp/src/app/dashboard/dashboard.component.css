@@ -1,0 +1,20 @@
+.nav{
+    margin-left: 450px;
+}
+button{
+    margin-left: 10px;
+    
+}
+span{
+    margin-top: 6px;
+}
+.navTab{
+    display: flex ;
+    flex-direction: row;
+    background-color: rgb(219, 216, 216);
+    border-radius: 5px;
+    
+}
+.container{
+    height: 300px;
+}

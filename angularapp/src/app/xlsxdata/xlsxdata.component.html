@@ -1,0 +1,44 @@
+<p>xlsxdata works!</p>
+<input type="file" (input)="uploadFile($event)">
+<div class="card">
+    <div class="card-body">
+      <div class="row justify-content-center">
+  
+      <div class="table-responsive">
+        
+        <table class="table table-hover table-striped">
+          <thead class="thead-dark">
+            <tr >
+              <th scope="col">Sr.No</th>
+  
+              <th scope="col">uuid</th>
+              <th scope="col">title</th>
+              <th scope="col">publisher</th>
+              <th scope="col">link</th>
+              <th scope="col">providerPublishTime</th>
+              <th scope="col">type</th>
+  
+            
+  
+  
+         
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let new of news;index as i">
+              <td scope="col">{{i+1}}</td>
+  
+              <td scope="col">{{new.uuid}}</td>
+              <td scope="col">{{new.title}}</td>
+              <td scope="col">{{new.publisher}}</td>
+              <td scope="col">{{new.link}}</td>
+              <td scope="col">{{new.providerPublishTime}}</td>
+              <td scope="col">{{new.type}}</td>
+            </tr>
+      
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+  </div>
